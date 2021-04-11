@@ -17,6 +17,7 @@
 		6C0372F32598F845004D4D0E /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0372F22598F844004D4D0E /* WorkoutView.swift */; };
 		6C0372F82598F8D3004D4D0E /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0372F72598F8D3004D4D0E /* PageView.swift */; };
 		6C0372FD2598F8DB004D4D0E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0372FC2598F8DB004D4D0E /* MenuView.swift */; };
+		6C0570912623299000BD4FE1 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0570902623299000BD4FE1 /* DataManager.swift */; };
 		6C0C650725988C7000F0D43E /* HoverRunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C650625988C7000F0D43E /* HoverRunApp.swift */; };
 		6C0C650925988C7000F0D43E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C650825988C7000F0D43E /* ContentView.swift */; };
 		6C0C650B25988C7700F0D43E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C0C650A25988C7700F0D43E /* Assets.xcassets */; };
@@ -45,7 +46,6 @@
 		6C0C65932598AC8300F0D43E /* RunMetricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C65922598AC8300F0D43E /* RunMetricsView.swift */; };
 		6C0C659B2598C50A00F0D43E /* WorkoutDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C659A2598C50A00F0D43E /* WorkoutDetailsView.swift */; };
 		6C0C65A12598C68100F0D43E /* HoverRun.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C659F2598C68100F0D43E /* HoverRun.xcdatamodeld */; };
-		6C0C65AF2598CAAF00F0D43E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C65AE2598CAAF00F0D43E /* DataManager.swift */; };
 		6C69AE03259ABE94009605C2 /* WorkoutSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C69AE02259ABE94009605C2 /* WorkoutSummaryView.swift */; };
 		6C79B72B25A21BCA001FBCA0 /* MailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C79B72A25A21BCA001FBCA0 /* MailManager.swift */; };
 		6C79B73625A34BCB001FBCA0 /* WorkoutProgramMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C79B73525A34BCB001FBCA0 /* WorkoutProgramMenu.swift */; };
@@ -109,6 +109,7 @@
 		6C0372F22598F844004D4D0E /* WorkoutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
 		6C0372F72598F8D3004D4D0E /* PageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 		6C0372FC2598F8DB004D4D0E /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		6C0570902623299000BD4FE1 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		6C0C650325988C7000F0D43E /* HoverRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoverRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C0C650625988C7000F0D43E /* HoverRunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoverRunApp.swift; sourceTree = "<group>"; };
 		6C0C650825988C7000F0D43E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -141,7 +142,6 @@
 		6C0C65922598AC8300F0D43E /* RunMetricsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunMetricsView.swift; sourceTree = "<group>"; };
 		6C0C659A2598C50A00F0D43E /* WorkoutDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetailsView.swift; sourceTree = "<group>"; };
 		6C0C65A02598C68100F0D43E /* HoverRun.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HoverRun.xcdatamodel; sourceTree = "<group>"; };
-		6C0C65AE2598CAAF00F0D43E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		6C69AE02259ABE94009605C2 /* WorkoutSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSummaryView.swift; sourceTree = "<group>"; };
 		6C79B72A25A21BCA001FBCA0 /* MailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailManager.swift; sourceTree = "<group>"; };
 		6C79B73525A34BCB001FBCA0 /* WorkoutProgramMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutProgramMenu.swift; sourceTree = "<group>"; };
@@ -334,11 +334,11 @@
 		6C0C65A52598CA1000F0D43E /* HoverRun Managers */ = {
 			isa = PBXGroup;
 			children = (
-				6C0C65AE2598CAAF00F0D43E /* DataManager.swift */,
 				6C0372C42598DC6C004D4D0E /* HealthManager.swift */,
 				6C0372C92598DF5F004D4D0E /* WatchManager.swift */,
 				6C79B72A25A21BCA001FBCA0 /* MailManager.swift */,
 				6CB646E62604EF7B00465CF6 /* MQTTManager.swift */,
+				6C0570902623299000BD4FE1 /* DataManager.swift */,
 			);
 			path = "HoverRun Managers";
 			sourceTree = "<group>";
@@ -548,13 +548,13 @@
 				6C0C657025989E7300F0D43E /* BoardStatusView.swift in Sources */,
 				6C0C6557259892D400F0D43E /* HistoryView.swift in Sources */,
 				6CB646E72604EF7B00465CF6 /* MQTTManager.swift in Sources */,
-				6C0C65AF2598CAAF00F0D43E /* DataManager.swift in Sources */,
 				6C0C657A2598A6C100F0D43E /* DistanceView.swift in Sources */,
 				6C79B72B25A21BCA001FBCA0 /* MailManager.swift in Sources */,
 				6C0C650725988C7000F0D43E /* HoverRunApp.swift in Sources */,
 				6C0C655E25989DAE00F0D43E /* RunningView.swift in Sources */,
 				6C0C656B25989E5900F0D43E /* WatchStatusView.swift in Sources */,
 				6C0C659B2598C50A00F0D43E /* WorkoutDetailsView.swift in Sources */,
+				6C0570912623299000BD4FE1 /* DataManager.swift in Sources */,
 				6C0C658E2598A90500F0D43E /* HoverStartStopView.swift in Sources */,
 				6C0C654D2598928200F0D43E /* StatusView.swift in Sources */,
 				6C69AE03259ABE94009605C2 /* WorkoutSummaryView.swift in Sources */,
