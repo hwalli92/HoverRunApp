@@ -3,10 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C0372C52598DC6C004D4D0E /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0372C42598DC6C004D4D0E /* HealthManager.swift */; };
+		6C0372CA2598DF5F004D4D0E /* WatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0372C92598DF5F004D4D0E /* WatchManager.swift */; };
+		6C0372D22598F039004D4D0E /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0372D12598F039004D4D0E /* WorkoutManager.swift */; };
+		6C0372D72598F613004D4D0E /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0372D62598F613004D4D0E /* InterfaceController.swift */; };
+		6C0372DC2598F6EB004D4D0E /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0372DB2598F6EA004D4D0E /* MenuButton.swift */; };
+		6C0372E12598F764004D4D0E /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0372E02598F763004D4D0E /* StartButton.swift */; };
+		6C0372E62598F7D5004D4D0E /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0372E52598F7D5004D4D0E /* StartView.swift */; };
+		6C0372F32598F845004D4D0E /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0372F22598F844004D4D0E /* WorkoutView.swift */; };
+		6C0372F82598F8D3004D4D0E /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0372F72598F8D3004D4D0E /* PageView.swift */; };
+		6C0372FD2598F8DB004D4D0E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0372FC2598F8DB004D4D0E /* MenuView.swift */; };
 		6C0C650725988C7000F0D43E /* HoverRunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C650625988C7000F0D43E /* HoverRunApp.swift */; };
 		6C0C650925988C7000F0D43E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C650825988C7000F0D43E /* ContentView.swift */; };
 		6C0C650B25988C7700F0D43E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C0C650A25988C7700F0D43E /* Assets.xcassets */; };
@@ -19,6 +29,31 @@
 		6C0C652825988C7A00F0D43E /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C652725988C7A00F0D43E /* ComplicationController.swift */; };
 		6C0C652A25988C7D00F0D43E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C0C652925988C7D00F0D43E /* Assets.xcassets */; };
 		6C0C652D25988C7D00F0D43E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C0C652C25988C7D00F0D43E /* Preview Assets.xcassets */; };
+		6C0C654225988C9C00F0D43E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0C654125988C9C00F0D43E /* HealthKit.framework */; };
+		6C0C654825988CC000F0D43E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0C654725988CC000F0D43E /* HealthKit.framework */; };
+		6C0C654D2598928200F0D43E /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C654C2598928200F0D43E /* StatusView.swift */; };
+		6C0C6557259892D400F0D43E /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C6556259892D400F0D43E /* HistoryView.swift */; };
+		6C0C655E25989DAE00F0D43E /* RunningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C655D25989DAE00F0D43E /* RunningView.swift */; };
+		6C0C656B25989E5900F0D43E /* WatchStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C656A25989E5900F0D43E /* WatchStatusView.swift */; };
+		6C0C657025989E7300F0D43E /* BoardStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C656F25989E7300F0D43E /* BoardStatusView.swift */; };
+		6C0C65752598A6A900F0D43E /* HeartRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C65742598A6A900F0D43E /* HeartRateView.swift */; };
+		6C0C657A2598A6C100F0D43E /* DistanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C65792598A6C100F0D43E /* DistanceView.swift */; };
+		6C0C657F2598A6F900F0D43E /* CaloriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C657E2598A6F900F0D43E /* CaloriesView.swift */; };
+		6C0C65842598A70500F0D43E /* PaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C65832598A70500F0D43E /* PaceView.swift */; };
+		6C0C65892598A8F500F0D43E /* HoverSpeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C65882598A8F500F0D43E /* HoverSpeedView.swift */; };
+		6C0C658E2598A90500F0D43E /* HoverStartStopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C658D2598A90500F0D43E /* HoverStartStopView.swift */; };
+		6C0C65932598AC8300F0D43E /* RunMetricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C65922598AC8300F0D43E /* RunMetricsView.swift */; };
+		6C0C659B2598C50A00F0D43E /* WorkoutDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C659A2598C50A00F0D43E /* WorkoutDetailsView.swift */; };
+		6C0C65A12598C68100F0D43E /* HoverRun.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C659F2598C68100F0D43E /* HoverRun.xcdatamodeld */; };
+		6C0C65AF2598CAAF00F0D43E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C65AE2598CAAF00F0D43E /* DataManager.swift */; };
+		6C69AE03259ABE94009605C2 /* WorkoutSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C69AE02259ABE94009605C2 /* WorkoutSummaryView.swift */; };
+		6C79B72B25A21BCA001FBCA0 /* MailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C79B72A25A21BCA001FBCA0 /* MailManager.swift */; };
+		6C79B73625A34BCB001FBCA0 /* WorkoutProgramMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C79B73525A34BCB001FBCA0 /* WorkoutProgramMenu.swift */; };
+		6CB646E72604EF7B00465CF6 /* MQTTManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB646E62604EF7B00465CF6 /* MQTTManager.swift */; };
+		6CFB13A6259B4C27005F04CD /* WorkoutGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFB13A5259B4C27005F04CD /* WorkoutGraphView.swift */; };
+		6CFB13AC259B71E7005F04CD /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 6CFB13AB259B71E7005F04CD /* SwiftUICharts */; };
+		6CFB13B1259B7B9B005F04CD /* WorkoutMetricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFB13B0259B7B9B005F04CD /* WorkoutMetricsView.swift */; };
+		8214863AD32C65C7094CC395 /* Pods_HoverRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3350B7C737A527B335FB3B /* Pods_HoverRun.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +99,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6C0372C42598DC6C004D4D0E /* HealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
+		6C0372C92598DF5F004D4D0E /* WatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchManager.swift; sourceTree = "<group>"; };
+		6C0372D12598F039004D4D0E /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
+		6C0372D62598F613004D4D0E /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		6C0372DB2598F6EA004D4D0E /* MenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
+		6C0372E02598F763004D4D0E /* StartButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
+		6C0372E52598F7D5004D4D0E /* StartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		6C0372F22598F844004D4D0E /* WorkoutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
+		6C0372F72598F8D3004D4D0E /* PageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		6C0372FC2598F8DB004D4D0E /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		6C0C650325988C7000F0D43E /* HoverRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoverRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C0C650625988C7000F0D43E /* HoverRunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoverRunApp.swift; sourceTree = "<group>"; };
 		6C0C650825988C7000F0D43E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,13 +125,49 @@
 		6C0C652925988C7D00F0D43E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C0C652C25988C7D00F0D43E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6C0C652E25988C7D00F0D43E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C0C654125988C9C00F0D43E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		6C0C654725988CC000F0D43E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		6C0C654C2598928200F0D43E /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
+		6C0C6556259892D400F0D43E /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		6C0C655D25989DAE00F0D43E /* RunningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningView.swift; sourceTree = "<group>"; };
+		6C0C656A25989E5900F0D43E /* WatchStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchStatusView.swift; sourceTree = "<group>"; };
+		6C0C656F25989E7300F0D43E /* BoardStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardStatusView.swift; sourceTree = "<group>"; };
+		6C0C65742598A6A900F0D43E /* HeartRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateView.swift; sourceTree = "<group>"; };
+		6C0C65792598A6C100F0D43E /* DistanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceView.swift; sourceTree = "<group>"; };
+		6C0C657E2598A6F900F0D43E /* CaloriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloriesView.swift; sourceTree = "<group>"; };
+		6C0C65832598A70500F0D43E /* PaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaceView.swift; sourceTree = "<group>"; };
+		6C0C65882598A8F500F0D43E /* HoverSpeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoverSpeedView.swift; sourceTree = "<group>"; };
+		6C0C658D2598A90500F0D43E /* HoverStartStopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoverStartStopView.swift; sourceTree = "<group>"; };
+		6C0C65922598AC8300F0D43E /* RunMetricsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunMetricsView.swift; sourceTree = "<group>"; };
+		6C0C659A2598C50A00F0D43E /* WorkoutDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetailsView.swift; sourceTree = "<group>"; };
+		6C0C65A02598C68100F0D43E /* HoverRun.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HoverRun.xcdatamodel; sourceTree = "<group>"; };
+		6C0C65AE2598CAAF00F0D43E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		6C69AE02259ABE94009605C2 /* WorkoutSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSummaryView.swift; sourceTree = "<group>"; };
+		6C79B72A25A21BCA001FBCA0 /* MailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailManager.swift; sourceTree = "<group>"; };
+		6C79B73525A34BCB001FBCA0 /* WorkoutProgramMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutProgramMenu.swift; sourceTree = "<group>"; };
+		6CB646E62604EF7B00465CF6 /* MQTTManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTTManager.swift; sourceTree = "<group>"; };
+		6CFB13A5259B4C27005F04CD /* WorkoutGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutGraphView.swift; sourceTree = "<group>"; };
+		6CFB13B0259B7B9B005F04CD /* WorkoutMetricsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutMetricsView.swift; sourceTree = "<group>"; };
+		9A3350B7C737A527B335FB3B /* Pods_HoverRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoverRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D55C5AC8D9531AC71F63CB3 /* Pods-HoverRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoverRun.release.xcconfig"; path = "Target Support Files/Pods-HoverRun/Pods-HoverRun.release.xcconfig"; sourceTree = "<group>"; };
+		EFE3458C6997CDBD4DDD1B9B /* Pods-HoverRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoverRun.debug.xcconfig"; path = "Target Support Files/Pods-HoverRun/Pods-HoverRun.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2883B78077461F38DBCC06AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6C0C650025988C7000F0D43E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C0C654225988C9C00F0D43E /* HealthKit.framework in Frameworks */,
+				6CFB13AC259B71E7005F04CD /* SwiftUICharts in Frameworks */,
+				8214863AD32C65C7094CC395 /* Pods_HoverRun.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,12 +175,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C0C654825988CC000F0D43E /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C0372CE2598EFEE004D4D0E /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				6C0372E02598F763004D4D0E /* StartButton.swift */,
+				6C0372DB2598F6EA004D4D0E /* MenuButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		6C0372D02598EFFB004D4D0E /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				6C0C652725988C7A00F0D43E /* ComplicationController.swift */,
+				6C0372D12598F039004D4D0E /* WorkoutManager.swift */,
+				6C0372D62598F613004D4D0E /* InterfaceController.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		6C0C64FA25988C6F00F0D43E = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +208,8 @@
 				6C0C651625988C7700F0D43E /* HoverRun WatchKit App */,
 				6C0C652225988C7A00F0D43E /* HoverRun WatchKit Extension */,
 				6C0C650425988C7000F0D43E /* Products */,
+				6C0C654025988C9C00F0D43E /* Frameworks */,
+				E2267FE425E8AE1C502BAB2A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,9 +228,14 @@
 			children = (
 				6C0C650625988C7000F0D43E /* HoverRunApp.swift */,
 				6C0C650825988C7000F0D43E /* ContentView.swift */,
+				6C0C656525989DE200F0D43E /* SettingsView Group */,
+				6C0C655B25989D4400F0D43E /* RunningView Group */,
+				6C0C656925989E0500F0D43E /* HistoryViewGroup */,
 				6C0C650A25988C7700F0D43E /* Assets.xcassets */,
 				6C0C650F25988C7700F0D43E /* Info.plist */,
+				6C0C65A52598CA1000F0D43E /* HoverRun Managers */,
 				6C0C650C25988C7700F0D43E /* Preview Content */,
+				6C0C659F2598C68100F0D43E /* HoverRun.xcdatamodeld */,
 			);
 			path = HoverRun;
 			sourceTree = "<group>";
@@ -152,9 +260,14 @@
 		6C0C652225988C7A00F0D43E /* HoverRun WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				6C0C652325988C7A00F0D43E /* ContentView.swift */,
 				6C0C652525988C7A00F0D43E /* HoverRunApp.swift */,
-				6C0C652725988C7A00F0D43E /* ComplicationController.swift */,
+				6C0C652325988C7A00F0D43E /* ContentView.swift */,
+				6C0372E52598F7D5004D4D0E /* StartView.swift */,
+				6C0372F22598F844004D4D0E /* WorkoutView.swift */,
+				6C0372FC2598F8DB004D4D0E /* MenuView.swift */,
+				6C0372F72598F8D3004D4D0E /* PageView.swift */,
+				6C0372CE2598EFEE004D4D0E /* Buttons */,
+				6C0372D02598EFFB004D4D0E /* Managers */,
 				6C0C652925988C7D00F0D43E /* Assets.xcassets */,
 				6C0C652E25988C7D00F0D43E /* Info.plist */,
 				6C0C652B25988C7D00F0D43E /* Preview Content */,
@@ -170,6 +283,75 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		6C0C654025988C9C00F0D43E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C0C654725988CC000F0D43E /* HealthKit.framework */,
+				6C0C654125988C9C00F0D43E /* HealthKit.framework */,
+				9A3350B7C737A527B335FB3B /* Pods_HoverRun.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6C0C655B25989D4400F0D43E /* RunningView Group */ = {
+			isa = PBXGroup;
+			children = (
+				6C0C655D25989DAE00F0D43E /* RunningView.swift */,
+				6C0C65922598AC8300F0D43E /* RunMetricsView.swift */,
+				6C0C65742598A6A900F0D43E /* HeartRateView.swift */,
+				6C0C65792598A6C100F0D43E /* DistanceView.swift */,
+				6C0C657E2598A6F900F0D43E /* CaloriesView.swift */,
+				6C0C65832598A70500F0D43E /* PaceView.swift */,
+				6C0C65882598A8F500F0D43E /* HoverSpeedView.swift */,
+				6C0C658D2598A90500F0D43E /* HoverStartStopView.swift */,
+			);
+			path = "RunningView Group";
+			sourceTree = "<group>";
+		};
+		6C0C656525989DE200F0D43E /* SettingsView Group */ = {
+			isa = PBXGroup;
+			children = (
+				6C0C654C2598928200F0D43E /* StatusView.swift */,
+				6C0C656A25989E5900F0D43E /* WatchStatusView.swift */,
+				6C0C656F25989E7300F0D43E /* BoardStatusView.swift */,
+				6C79B73525A34BCB001FBCA0 /* WorkoutProgramMenu.swift */,
+			);
+			path = "SettingsView Group";
+			sourceTree = "<group>";
+		};
+		6C0C656925989E0500F0D43E /* HistoryViewGroup */ = {
+			isa = PBXGroup;
+			children = (
+				6C0C6556259892D400F0D43E /* HistoryView.swift */,
+				6C69AE02259ABE94009605C2 /* WorkoutSummaryView.swift */,
+				6C0C659A2598C50A00F0D43E /* WorkoutDetailsView.swift */,
+				6CFB13A5259B4C27005F04CD /* WorkoutGraphView.swift */,
+				6CFB13B0259B7B9B005F04CD /* WorkoutMetricsView.swift */,
+			);
+			path = HistoryViewGroup;
+			sourceTree = "<group>";
+		};
+		6C0C65A52598CA1000F0D43E /* HoverRun Managers */ = {
+			isa = PBXGroup;
+			children = (
+				6C0C65AE2598CAAF00F0D43E /* DataManager.swift */,
+				6C0372C42598DC6C004D4D0E /* HealthManager.swift */,
+				6C0372C92598DF5F004D4D0E /* WatchManager.swift */,
+				6C79B72A25A21BCA001FBCA0 /* MailManager.swift */,
+				6CB646E62604EF7B00465CF6 /* MQTTManager.swift */,
+			);
+			path = "HoverRun Managers";
+			sourceTree = "<group>";
+		};
+		E2267FE425E8AE1C502BAB2A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EFE3458C6997CDBD4DDD1B9B /* Pods-HoverRun.debug.xcconfig */,
+				9D55C5AC8D9531AC71F63CB3 /* Pods-HoverRun.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -177,10 +359,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6C0C653925988C7D00F0D43E /* Build configuration list for PBXNativeTarget "HoverRun" */;
 			buildPhases = (
+				FF4CA7F9CF4999D46F69F896 /* [CP] Check Pods Manifest.lock */,
 				6C0C64FF25988C7000F0D43E /* Sources */,
 				6C0C650025988C7000F0D43E /* Frameworks */,
 				6C0C650125988C7000F0D43E /* Resources */,
 				6C0C653825988C7D00F0D43E /* Embed Watch Content */,
+				8770AB5FEEAC1B724F034B40 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -188,6 +372,9 @@
 				6C0C651525988C7700F0D43E /* PBXTargetDependency */,
 			);
 			name = HoverRun;
+			packageProductDependencies = (
+				6CFB13AB259B71E7005F04CD /* SwiftUICharts */,
+			);
 			productName = HoverRun;
 			productReference = 6C0C650325988C7000F0D43E /* HoverRun.app */;
 			productType = "com.apple.product-type.application";
@@ -198,6 +385,7 @@
 			buildPhases = (
 				6C0C651025988C7700F0D43E /* Resources */,
 				6C0C653425988C7D00F0D43E /* Embed App Extensions */,
+				2883B78077461F38DBCC06AF /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -255,6 +443,9 @@
 				Base,
 			);
 			mainGroup = 6C0C64FA25988C6F00F0D43E;
+			packageReferences = (
+				6CFB13AA259B71E7005F04CD /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = 6C0C650425988C7000F0D43E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -295,13 +486,78 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8770AB5FEEAC1B724F034B40 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HoverRun/Pods-HoverRun-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HoverRun/Pods-HoverRun-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HoverRun/Pods-HoverRun-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF4CA7F9CF4999D46F69F896 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HoverRun-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6C0C64FF25988C7000F0D43E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C0C657F2598A6F900F0D43E /* CaloriesView.swift in Sources */,
+				6C0372C52598DC6C004D4D0E /* HealthManager.swift in Sources */,
 				6C0C650925988C7000F0D43E /* ContentView.swift in Sources */,
+				6CFB13A6259B4C27005F04CD /* WorkoutGraphView.swift in Sources */,
+				6C0C65932598AC8300F0D43E /* RunMetricsView.swift in Sources */,
+				6C0C65842598A70500F0D43E /* PaceView.swift in Sources */,
+				6C0C65892598A8F500F0D43E /* HoverSpeedView.swift in Sources */,
+				6C0C65752598A6A900F0D43E /* HeartRateView.swift in Sources */,
+				6CFB13B1259B7B9B005F04CD /* WorkoutMetricsView.swift in Sources */,
+				6C0372CA2598DF5F004D4D0E /* WatchManager.swift in Sources */,
+				6C0C65A12598C68100F0D43E /* HoverRun.xcdatamodeld in Sources */,
+				6C79B73625A34BCB001FBCA0 /* WorkoutProgramMenu.swift in Sources */,
+				6C0C657025989E7300F0D43E /* BoardStatusView.swift in Sources */,
+				6C0C6557259892D400F0D43E /* HistoryView.swift in Sources */,
+				6CB646E72604EF7B00465CF6 /* MQTTManager.swift in Sources */,
+				6C0C65AF2598CAAF00F0D43E /* DataManager.swift in Sources */,
+				6C0C657A2598A6C100F0D43E /* DistanceView.swift in Sources */,
+				6C79B72B25A21BCA001FBCA0 /* MailManager.swift in Sources */,
 				6C0C650725988C7000F0D43E /* HoverRunApp.swift in Sources */,
+				6C0C655E25989DAE00F0D43E /* RunningView.swift in Sources */,
+				6C0C656B25989E5900F0D43E /* WatchStatusView.swift in Sources */,
+				6C0C659B2598C50A00F0D43E /* WorkoutDetailsView.swift in Sources */,
+				6C0C658E2598A90500F0D43E /* HoverStartStopView.swift in Sources */,
+				6C0C654D2598928200F0D43E /* StatusView.swift in Sources */,
+				6C69AE03259ABE94009605C2 /* WorkoutSummaryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,9 +565,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C0372D72598F613004D4D0E /* InterfaceController.swift in Sources */,
 				6C0C652625988C7A00F0D43E /* HoverRunApp.swift in Sources */,
+				6C0372DC2598F6EB004D4D0E /* MenuButton.swift in Sources */,
+				6C0372E62598F7D5004D4D0E /* StartView.swift in Sources */,
+				6C0372F32598F845004D4D0E /* WorkoutView.swift in Sources */,
+				6C0372F82598F8D3004D4D0E /* PageView.swift in Sources */,
+				6C0372D22598F039004D4D0E /* WorkoutManager.swift in Sources */,
+				6C0372FD2598F8DB004D4D0E /* MenuView.swift in Sources */,
 				6C0C652425988C7A00F0D43E /* ContentView.swift in Sources */,
 				6C0C652825988C7A00F0D43E /* ComplicationController.swift in Sources */,
+				6C0372E12598F764004D4D0E /* StartButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +710,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "HoverRun WatchKit Extension/HoverRun WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"HoverRun WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = PU6TKN2N34;
@@ -470,6 +735,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "HoverRun WatchKit Extension/HoverRun WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"HoverRun WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = PU6TKN2N34;
@@ -534,9 +800,11 @@
 		};
 		6C0C653A25988C7D00F0D43E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFE3458C6997CDBD4DDD1B9B /* Pods-HoverRun.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HoverRun/HoverRun.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"HoverRun/Preview Content\"";
 				DEVELOPMENT_TEAM = PU6TKN2N34;
@@ -551,15 +819,17 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		6C0C653B25988C7D00F0D43E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D55C5AC8D9531AC71F63CB3 /* Pods-HoverRun.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HoverRun/HoverRun.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"HoverRun/Preview Content\"";
 				DEVELOPMENT_TEAM = PU6TKN2N34;
@@ -574,7 +844,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -619,6 +889,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6CFB13AA259B71E7005F04CD /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6CFB13AB259B71E7005F04CD /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6CFB13AA259B71E7005F04CD /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		6C0C659F2598C68100F0D43E /* HoverRun.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6C0C65A02598C68100F0D43E /* HoverRun.xcdatamodel */,
+			);
+			currentVersion = 6C0C65A02598C68100F0D43E /* HoverRun.xcdatamodel */;
+			path = HoverRun.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6C0C64FB25988C6F00F0D43E /* Project object */;
 }

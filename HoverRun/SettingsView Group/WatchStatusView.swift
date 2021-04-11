@@ -1,0 +1,42 @@
+//
+//  WatchStatusView.swift
+//  HoverRun
+//
+//  Created by Hasnainali Walli on 2020-12-27.
+//
+
+import SwiftUI
+
+struct WatchStatusView: View {
+    
+    @EnvironmentObject var watch: WatchManager
+    
+    var body: some View {
+        HStack{
+            Text("Watch Status: ")
+                .font(.title)
+                .padding(.trailing, 80.0)
+            HStack {
+                if watch.reachable {
+                    Image ("connected-icon")
+                } else {
+                    Image ("disconnected-icon")
+                }
+                
+                Button(action: {
+                    watch.checkReachable()
+                }) {
+                    Image("refresh-icon")
+                }
+                
+                
+            }
+        }
+    }
+}
+
+struct WatchStatusView_Previews: PreviewProvider {
+    static var previews: some View {
+        WatchStatusView().environmentObject(WatchManager())
+    }
+}

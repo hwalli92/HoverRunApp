@@ -9,10 +9,13 @@ import SwiftUI
 
 @main
 struct HoverRunApp: App {
+    
+    let workoutManager = WorkoutManager()
+    
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                ContentView()
+                ContentView().environmentObject(workoutManager)
             }
         }
     }
