@@ -34,7 +34,7 @@ class WatchManager: NSObject, WCSessionDelegate, ObservableObject {
     }
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-            
+        self.checkReachable()
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
