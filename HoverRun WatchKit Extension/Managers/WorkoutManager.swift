@@ -183,7 +183,6 @@ extension WorkoutManager: HKWorkoutSessionDelegate {
                         from fromState: HKWorkoutSessionState, date: Date) {
         
         if toState == .ended {
-            print("The workout has now ended.")
             workoutBuilder.endCollection(withEnd: Date()) { (success, error) in
                 self.workoutBuilder.finishWorkout { (workout, error) in
                     self.createSummary()

@@ -27,7 +27,6 @@ struct MenuView: View {
             Spacer()
             
             MenuButton(title: workoutPaused ? "Resume" : "Pause", symbolName: workoutPaused ? "play.circle.fill" : "pause.circle.fill", action: {
-                print("Pause tapped!")
                 self.workoutPaused.toggle()
                 self.pauseAction()
             }).padding(.leading, 6)
