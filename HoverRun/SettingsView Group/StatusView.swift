@@ -10,12 +10,26 @@ import SwiftUI
 struct StatusView: View {
     
     @EnvironmentObject var watch: WatchManager
+    @ObservedObject var trainingManager = TrainingProgramManager()
     
     var body: some View {
-        VStack {
-            WatchStatusView()
+        Form {
             
-            BoardStatusView ()
+            Section(header: Text("Status")){
+                WatchStatusView()
+            
+                BoardStatusView()
+            }
+            
+            Section(header: Text("Run Settings")){
+                WorkoutMenuView(trainingManager: TrainingProgramManager())
+                Button(action: {
+                    trainingManager.updateProgram()
+                }, label: {
+                    Text("Update Training Settings")
+                })
+            }
+            
         }
         
     }

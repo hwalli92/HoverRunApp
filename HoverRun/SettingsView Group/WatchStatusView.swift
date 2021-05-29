@@ -13,9 +13,8 @@ struct WatchStatusView: View {
     
     var body: some View {
         HStack{
-            Text("Watch Status: ")
-                .font(.title)
-                .padding(.trailing, 80.0)
+            Text("Apple Watch: ")
+                .padding(.trailing, 105.0)
             HStack {
                 if watch.reachable {
                     Image ("connected-icon")

@@ -15,12 +15,12 @@ struct ContentView: View {
     @EnvironmentObject var mqtt: MQTTManager
     
     
-    @State private var defaultView = 2
+    @State private var defaultView = 1
 
     var body: some View {
         TabView (selection: $defaultView) {
             NavigationView {
-                StatusView().navigationBarTitle(Text("HoverRun Status"), displayMode: .inline)
+                StatusView().navigationBarTitle(Text("HoverRun Settings"), displayMode: .inline)
             }.tabItem {
                 Image("status-icon")
             }.tag(1)
