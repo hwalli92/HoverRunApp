@@ -15,7 +15,7 @@ class MQTTManager: CocoaMQTTDelegate, ObservableObject {
     var mqttClient: CocoaMQTT
 
     @Published var status: Bool = false
-    @Published var buttonCount: String = "stop"
+    @Published var msgAck: String = "0"
     
     init() {
         let clientID = "HoverRunApp"
@@ -39,12 +39,13 @@ class MQTTManager: CocoaMQTTDelegate, ObservableObject {
     
     func sendMessage(topic:String, message:String) {
         self.mqttClient.publish(topic, withString: message)
+        print("Sent Msg: \(message)")
     }
     
     func mqtt(_ mqtt: CocoaMQTT, didConnectAck ack: CocoaMQTTConnAck) {
         print("Connected")
         self.status = true
-        self.mqttClient.subscribe("rpi/motorctrl")
+        self.mqttClient.subscribe("hvrrun/ack")
     }
     
     func mqtt(_ mqtt: CocoaMQTT, didPublishMessage message: CocoaMQTTMessage, id: UInt16) {
@@ -56,8 +57,7 @@ class MQTTManager: CocoaMQTTDelegate, ObservableObject {
     }
     
     func mqtt(_ mqtt: CocoaMQTT, didReceiveMessage message: CocoaMQTTMessage, id: UInt16) {
-        print("Message Received: \(message.string ?? "stop")")
-        self.buttonCount = message.string ?? "stop"
+        self.msgAck = message.string ?? "1"
     }
     
     func mqtt(_ mqtt: CocoaMQTT, didSubscribeTopic topic: [String]) {

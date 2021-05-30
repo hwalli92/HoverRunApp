@@ -19,6 +19,12 @@ class TrainingProgramManager: ObservableObject {
     static let trainingPrograms = ["Manual", "Timed", "Distance"]
     
     func updateProgram() {
+        let trainingDetails = ["Type": self.trainingProgram, "Level": self.trainingLevel, "Limit": self.timeLimit, "Status": self.trainingStatus] as [String : Any]
+        
+        if let JSONData = try? JSONSerialization.data(withJSONObject: trainingDetails, options: []){
+            let JSONText = String(data: JSONData, encoding: .utf8) ?? "None"
+            self.mqtt.sendMessage(topic: "hvrrun/training", message: JSONText)
+        }
         
     }
     
