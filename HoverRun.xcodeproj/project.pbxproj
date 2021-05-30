@@ -46,6 +46,7 @@
 		6C0C65932598AC8300F0D43E /* RunMetricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C65922598AC8300F0D43E /* RunMetricsView.swift */; };
 		6C0C659B2598C50A00F0D43E /* WorkoutDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C659A2598C50A00F0D43E /* WorkoutDetailsView.swift */; };
 		6C0C65A12598C68100F0D43E /* HoverRun.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C659F2598C68100F0D43E /* HoverRun.xcdatamodeld */; };
+		6C4F333826631CB400C8ED63 /* HoverTrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4F333726631CB400C8ED63 /* HoverTrainingView.swift */; };
 		6C69AE03259ABE94009605C2 /* WorkoutSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C69AE02259ABE94009605C2 /* WorkoutSummaryView.swift */; };
 		6C79B72B25A21BCA001FBCA0 /* MailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C79B72A25A21BCA001FBCA0 /* MailManager.swift */; };
 		6CB646E72604EF7B00465CF6 /* MQTTManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB646E62604EF7B00465CF6 /* MQTTManager.swift */; };
@@ -143,6 +144,7 @@
 		6C0C65922598AC8300F0D43E /* RunMetricsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunMetricsView.swift; sourceTree = "<group>"; };
 		6C0C659A2598C50A00F0D43E /* WorkoutDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetailsView.swift; sourceTree = "<group>"; };
 		6C0C65A02598C68100F0D43E /* HoverRun.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HoverRun.xcdatamodel; sourceTree = "<group>"; };
+		6C4F333726631CB400C8ED63 /* HoverTrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoverTrainingView.swift; sourceTree = "<group>"; };
 		6C69AE02259ABE94009605C2 /* WorkoutSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSummaryView.swift; sourceTree = "<group>"; };
 		6C79B72A25A21BCA001FBCA0 /* MailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailManager.swift; sourceTree = "<group>"; };
 		6CB646E62604EF7B00465CF6 /* MQTTManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTTManager.swift; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 				6C0C65832598A70500F0D43E /* PaceView.swift */,
 				6C0C65882598A8F500F0D43E /* HoverSpeedView.swift */,
 				6C0C658D2598A90500F0D43E /* HoverStartStopView.swift */,
+				6C4F333726631CB400C8ED63 /* HoverTrainingView.swift */,
 			);
 			path = "RunningView Group";
 			sourceTree = "<group>";
@@ -553,6 +556,7 @@
 				6C0C657A2598A6C100F0D43E /* DistanceView.swift in Sources */,
 				6C79B72B25A21BCA001FBCA0 /* MailManager.swift in Sources */,
 				6C0C650725988C7000F0D43E /* HoverRunApp.swift in Sources */,
+				6C4F333826631CB400C8ED63 /* HoverTrainingView.swift in Sources */,
 				6C0C655E25989DAE00F0D43E /* RunningView.swift in Sources */,
 				6C0C656B25989E5900F0D43E /* WatchStatusView.swift in Sources */,
 				6CC2B216266298340024735B /* WorkoutMenuView.swift in Sources */,

@@ -11,11 +11,11 @@ class TrainingProgramManager: ObservableObject {
     
     var mqtt = MQTTManager()
     
-    @Published var trainingProgram = "Manual"
+    @Published var trainingProgram = "Timed"
     @Published var trainingLevel = 1.0
     @Published var timeLimit = 5.0
     @Published var distanceLimit = 2.0
-    
+    @Published var trainingStatus = "stop"
     static let trainingPrograms = ["Manual", "Timed", "Distance"]
     
     func updateProgram() {
@@ -24,5 +24,9 @@ class TrainingProgramManager: ObservableObject {
     
     func updateLevel(factor: Double) {
         self.trainingLevel += factor
+    }
+    
+    func setTrainingStatus(status: String) {
+        self.trainingStatus = status
     }
 }

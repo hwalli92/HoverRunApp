@@ -13,13 +13,15 @@ struct RunningView: View {
     @EnvironmentObject var trainer: TrainingProgramManager
     
     var body: some View {
-        VStack(spacing: 75.0){
+        VStack(spacing: 50.0){
             HStack{
                 RunMetricsView()
                 HoverSpeedView()
             }
             
             HoverStartStopView()
+            
+            HoverTrainingView()
         }
     }
 }
