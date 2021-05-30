@@ -11,7 +11,6 @@ import WatchConnectivity
 class WatchManager: NSObject, WCSessionDelegate, ObservableObject {
     
     var session: WCSession
-    var workout: HealthManager = HealthManager()
     
     var dataContainer = DataManager.dataManager
     

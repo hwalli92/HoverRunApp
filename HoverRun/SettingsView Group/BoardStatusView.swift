@@ -13,21 +13,21 @@ struct BoardStatusView: View {
     @State private var redLED = false
     @State private var greenLED = false
         
-    @EnvironmentObject var mqtt: MQTTManager
+    @EnvironmentObject var trainer: TrainingProgramManager
     
     var body: some View {
         HStack{
             Text("Hoverboard: ")
                 .padding(.trailing, 110.0)
             HStack {
-                if mqtt.status {
+                if trainer.mqtt.status {
                     Image ("connected-icon")
                 } else {
                     Image ("disconnected-icon")
                 }
                 
                 Button(action: {
-                    self.mqtt.connect()
+                    self.trainer.mqtt.connect()
                     }
                 ) {
                     Image ("refresh-icon")

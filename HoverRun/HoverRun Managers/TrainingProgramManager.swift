@@ -9,6 +9,8 @@ import Foundation
 
 class TrainingProgramManager: ObservableObject {
     
+    var mqtt = MQTTManager()
+    
     @Published var trainingProgram = "Manual"
     @Published var trainingLevel = 1.0
     @Published var timeLimit = 5.0
@@ -18,5 +20,9 @@ class TrainingProgramManager: ObservableObject {
     
     func updateProgram() {
         
+    }
+    
+    func updateLevel(factor: Double) {
+        self.trainingLevel += factor
     }
 }

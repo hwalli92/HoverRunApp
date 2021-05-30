@@ -10,7 +10,7 @@ import SwiftUI
 struct StatusView: View {
     
     @EnvironmentObject var watch: WatchManager
-    @ObservedObject var trainingManager = TrainingProgramManager()
+    @EnvironmentObject var trainer: TrainingProgramManager
     
     var body: some View {
         Form {
@@ -22,9 +22,10 @@ struct StatusView: View {
             }
             
             Section(header: Text("Run Settings")){
-                WorkoutMenuView(trainingManager: TrainingProgramManager())
+                WorkoutMenuView()
+                
                 Button(action: {
-                    trainingManager.updateProgram()
+                    trainer.updateProgram()
                 }, label: {
                     Text("Update Training Settings")
                 })

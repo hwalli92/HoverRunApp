@@ -12,7 +12,7 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @EnvironmentObject var healthManager: HealthManager
     @EnvironmentObject var watch: WatchManager
-    @EnvironmentObject var mqtt: MQTTManager
+    @EnvironmentObject var trainer: TrainingProgramManager
     
     
     @State private var defaultView = 1

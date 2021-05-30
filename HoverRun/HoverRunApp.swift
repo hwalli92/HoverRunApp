@@ -12,12 +12,12 @@ struct HoverRunApp: App {
     
     let dataContainer = DataManager.dataManager
     let watch = WatchManager()
-    let mqtt = MQTTManager()
+    let trainer = TrainingProgramManager()
         
     var body: some Scene {
         WindowGroup {
             ContentView().environment(\.managedObjectContext, dataContainer.dataContainer.viewContext)
-                .environmentObject(watch).environmentObject(mqtt)
+                .environmentObject(watch).environmentObject(trainer)
         }
     }
 }

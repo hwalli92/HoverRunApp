@@ -10,6 +10,7 @@ import SwiftUI
 struct RunningView: View {
     
     @EnvironmentObject var watch: WatchManager
+    @EnvironmentObject var trainer: TrainingProgramManager
     
     var body: some View {
         VStack(spacing: 75.0){
@@ -25,6 +26,6 @@ struct RunningView: View {
 
 struct RunningView_Previews: PreviewProvider {
     static var previews: some View {
-        RunningView().environmentObject(WatchManager())
+        RunningView().environmentObject(WatchManager()).environmentObject(TrainingProgramManager())
     }
 }

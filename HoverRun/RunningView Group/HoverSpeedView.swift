@@ -8,18 +8,31 @@
 import SwiftUI
 
 struct HoverSpeedView: View {
+    
+    @EnvironmentObject var trainer: TrainingProgramManager
+    
     var body: some View {
         VStack{
-            Image ("speed-up-icon")
-            Text ("0.0 KM/HR")
+            Button(action: {
+                trainer.updateLevel(factor: 0.5)
+            }, label: {
+                Image ("speed-up-icon")
+            })
+            
+            Text ("\(trainer.trainingLevel, specifier: "%.1f")")
                 .font(.title)
-            Image ("speed-down-icon")
+            
+            Button(action: {
+                trainer.updateLevel(factor: -0.5)
+            }, label: {
+                Image ("speed-down-icon")
+            })
         }
     }
 }
 
 struct HoverSpeedView_Previews: PreviewProvider {
     static var previews: some View {
-        HoverSpeedView()
+        HoverSpeedView().environmentObject(TrainingProgramManager())
     }
 }
