@@ -57,11 +57,12 @@ class MQTTManager: CocoaMQTTDelegate, ObservableObject {
     }
     
     func mqtt(_ mqtt: CocoaMQTT, didReceiveMessage message: CocoaMQTTMessage, id: UInt16) {
-        self.msgAck = message.string ?? "1"
+        self.msgAck = message.string ?? "0"
     }
     
     func mqtt(_ mqtt: CocoaMQTT, didSubscribeTopic topic: [String]) {
         print("Did subscribe to \(topic)")
+        print("\(self.status)")
     }
     
     func mqtt(_ mqtt: CocoaMQTT, didUnsubscribeTopic topic: String) {

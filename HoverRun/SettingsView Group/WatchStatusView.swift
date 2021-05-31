@@ -21,14 +21,6 @@ struct WatchStatusView: View {
                 } else {
                     Image ("disconnected-icon")
                 }
-                
-                Button(action: {
-                    watch.checkReachable()
-                }) {
-                    Image("refresh-icon")
-                }
-                
-                
             }
         }
     }

@@ -25,13 +25,6 @@ struct BoardStatusView: View {
                 } else {
                     Image ("disconnected-icon")
                 }
-                
-                Button(action: {
-                    self.trainer.mqtt.connect()
-                    }
-                ) {
-                    Image ("refresh-icon")
-                }
             }
         }
             

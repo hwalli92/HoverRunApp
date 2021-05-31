@@ -11,15 +11,14 @@ class TrainingProgramManager: ObservableObject {
     
     var mqtt = MQTTManager()
     
-    @Published var trainingProgram = "Timed"
+    @Published var trainingProgram = "Time"
     @Published var trainingLevel = 1.0
-    @Published var timeLimit = 5.0
-    @Published var distanceLimit = 2.0
+    @Published var trainingLimit = 5.0
     @Published var trainingStatus = "stop"
-    static let trainingPrograms = ["Manual", "Timed", "Distance"]
+    static let trainingPrograms = ["Manual", "Time", "Distance"]
     
     func updateProgram() {
-        let trainingDetails = ["Type": self.trainingProgram, "Level": self.trainingLevel, "Limit": self.timeLimit, "Status": self.trainingStatus] as [String : Any]
+        let trainingDetails = ["Type": self.trainingProgram, "Level": self.trainingLevel, "Limit": self.trainingLimit, "Status": self.trainingStatus] as [String : Any]
         
         if let JSONData = try? JSONSerialization.data(withJSONObject: trainingDetails, options: []){
             let JSONText = String(data: JSONData, encoding: .utf8) ?? "None"
@@ -29,7 +28,9 @@ class TrainingProgramManager: ObservableObject {
     }
     
     func updateLevel(factor: Double) {
-        self.trainingLevel += factor
+        if self.trainingLevel > 0.0 && self.trainingLevel < 8.0 {
+            self.trainingLevel += factor
+        }
     }
     
     func setTrainingStatus(status: String) {

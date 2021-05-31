@@ -15,7 +15,7 @@ struct ContentView: View {
     @EnvironmentObject var trainer: TrainingProgramManager
     
     
-    @State private var defaultView = 1
+    @State private var defaultView = 2
 
     var body: some View {
         TabView (selection: $defaultView) {

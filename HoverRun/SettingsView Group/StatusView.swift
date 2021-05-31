@@ -19,6 +19,13 @@ struct StatusView: View {
                 WatchStatusView()
             
                 BoardStatusView()
+                
+                Button(action: {
+                    trainer.mqtt.connect()
+                    watch.checkReachable()
+                }, label: {
+                    Text("Refresh Connection Status")
+                })
             }
             
             Section(header: Text("Run Settings")){

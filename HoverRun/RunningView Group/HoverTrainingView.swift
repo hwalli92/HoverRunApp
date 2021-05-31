@@ -21,11 +21,11 @@ struct HoverTrainingView: View {
                 Text("Training Level:  \(trainer.trainingLevel, specifier: "%.1f")")
                 
                 if trainer.trainingProgram == "Timed" {
-                    Text("Training Time Limit:  \(trainer.timeLimit, specifier: "%.1f")")
+                    Text("Training Time Limit:  \(trainer.trainingLimit, specifier: "%.1f")")
                 }
                 
                 if trainer.trainingProgram == "Distance" {
-                    Text("Training Distance Limit:  \(trainer.distanceLimit, specifier: "%.1f")")
+                    Text("Training Distance Limit:  \(trainer.trainingLimit, specifier: "%.1f")")
                 }
             }
         }
