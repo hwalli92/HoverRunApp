@@ -16,7 +16,11 @@ struct StatusView: View {
         Form {
             
             Section(header: Text("Status")){
-                WatchStatusView()
+                Toggle("Enable Apple Watch", isOn: $watch.enable)
+                
+                if watch.enable{
+                    WatchStatusView()
+                }
             
                 BoardStatusView()
                 

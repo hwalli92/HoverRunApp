@@ -18,6 +18,7 @@ class WatchManager: NSObject, WCSessionDelegate, ObservableObject {
     var workoutEnd: Date = Date()
     var timestamp: [Int] = [0]
     
+    @Published var enable = true
     @Published var workoutStatus: String = "Not Running"
     @Published var heartrate: [Double] = [0]
     @Published var distance: [Double] = [0]
