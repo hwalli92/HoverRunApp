@@ -28,21 +28,27 @@ struct WorkoutMetricsView: View {
                 
                 VStack(alignment: .leading){
                     Text("Avg Pace")
-                    Text("\((getAverage(data: currentWorkout.pace ?? [0])), specifier: "%.1f") Min/KM")
+                    Text("\((getAverage(data: currentWorkout.pace ?? [0])), specifier: "%.1f") min/km")
                 }
             }
             
-            VStack(alignment: .leading, spacing: 25.0){
+            VStack(alignment: .leading, spacing: 20.0){
                 VStack(alignment: .leading) {
                     Text("Start Time: \(timeString(date: currentWorkout.start ?? Date()))")
                     Text("End Time: \(timeString(date: currentWorkout.end ?? Date())) ")
                 }
-                .padding(.bottom, 24.0)
+                .padding(.bottom, 25.0)
+                
+                VStack(alignment: .leading){
+                    Text("Session Type: \(currentWorkout.type ?? " ")")
+                    Text("Session Limit: \(currentWorkout.limit ?? "None")")
+                    Text("Session Intensity: \(currentWorkout.intensity, specifier: "%.1f")")
+                }
                 
                 VStack(alignment: .leading){
                     Text("Distance")
-                    Text("\((getMetric(data: currentWorkout.distance ?? [0]))/1000, specifier: "%.2f") KM")
-                }
+                    Text("\((getMetric(data: currentWorkout.distance ?? [0]))/1000, specifier: "%.2f") km")
+                }.padding(.bottom, 5.0)
                 
                 VStack(alignment: .leading){
                     Text("Avg. Heart Rate")
