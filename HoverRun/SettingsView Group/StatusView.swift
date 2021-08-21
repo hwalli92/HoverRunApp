@@ -16,12 +16,8 @@ struct StatusView: View {
         Form {
             
             Section(header: Text("Status")){
-                Toggle("Enable Apple Watch", isOn: $trainer.watch.enable)
                 
-                if trainer.watch.enable{
-                    WatchStatusView()
-                }
-            
+                WatchStatusView()            
                 BoardStatusView()
                 
                 Button(action: {
@@ -49,6 +45,6 @@ struct StatusView: View {
 
 struct StatusView_Previews: PreviewProvider {
     static var previews: some View {
-        StatusView().environmentObject(TrainingProgramManager())
+        StatusView().environmentObject(WatchManager())
     }
 }

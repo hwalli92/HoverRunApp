@@ -15,7 +15,7 @@ class TrainingProgramManager: ObservableObject {
     @Published var trainingProgram = "Timed"
     @Published var trainingLevel = 1.0
     @Published var trainingLimit = 5.0
-    @Published var trainingStatus = "Stop"
+    var trainingStatus = "Stop"
     static let trainingPrograms = ["Manual", "Timed", "Distance"]
     
     func updateProgram() {
@@ -36,5 +36,14 @@ class TrainingProgramManager: ObservableObject {
     
     func setTrainingStatus(status: String) {
         self.trainingStatus = status
+    }
+    
+    func getTrainingStatus() -> String{
+        if self.watchEnabled{
+            return watch.workoutStatus
+        }
+        else{
+            return self.trainingStatus
+        }
     }
 }
