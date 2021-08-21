@@ -13,23 +13,23 @@ struct HoverStartStopView: View {
     
     var body: some View {
         HStack(spacing: 50.0) {
-            if (trainer.trainingStatus == "stop" || trainer.trainingStatus == "pause"){
+            if (trainer.trainingStatus == "Stop" || trainer.trainingStatus == "Pause"){
                 Button(action: {
-                    trainer.setTrainingStatus(status: "start")
+                    trainer.setTrainingStatus(status: "Start")
                 }, label: {
                     Image ("start-icon").resizable().frame(width: 100.0, height: 100.0)
                 })
             }
             else{
                 Button(action: {
-                    trainer.setTrainingStatus(status: "pause")
+                    trainer.setTrainingStatus(status: "Pause")
                 }, label: {
                     Image ("pause-icon").resizable().frame(width: 100.0, height: 100.0)
                 })
             }
             
             Button(action: {
-                trainer.setTrainingStatus(status: "stop")
+                trainer.setTrainingStatus(status: "Stop")
             }, label: {
                 Image ("stop-icon").resizable().frame(width: 100.0, height: 100.0)
             })
