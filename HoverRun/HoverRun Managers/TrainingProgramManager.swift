@@ -10,6 +10,7 @@ import Foundation
 class TrainingProgramManager: ObservableObject {
     
     var mqtt = MQTTManager()
+    var watch = WatchManager()
     
     @Published var trainingProgram = "Time"
     @Published var trainingLevel = 1.0

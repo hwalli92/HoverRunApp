@@ -9,9 +9,6 @@ import SwiftUI
 import CocoaMQTT
 
 struct BoardStatusView: View {
-    
-    @State private var redLED = false
-    @State private var greenLED = false
         
     @EnvironmentObject var trainer: TrainingProgramManager
     
@@ -33,6 +30,6 @@ struct BoardStatusView: View {
 
 struct BoardStatusView_Previews: PreviewProvider {
     static var previews: some View {
-        BoardStatusView()
+        BoardStatusView().environmentObject(TrainingProgramManager())
     }
 }

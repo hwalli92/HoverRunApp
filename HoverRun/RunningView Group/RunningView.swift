@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RunningView: View {
     
-    @EnvironmentObject var watch: WatchManager
+    //@EnvironmentObject var watch: WatchManager
     @EnvironmentObject var trainer: TrainingProgramManager
     
     var body: some View {
@@ -28,6 +28,6 @@ struct RunningView: View {
 
 struct RunningView_Previews: PreviewProvider {
     static var previews: some View {
-        RunningView().environmentObject(WatchManager()).environmentObject(TrainingProgramManager())
+        RunningView().environmentObject(TrainingProgramManager())
     }
 }

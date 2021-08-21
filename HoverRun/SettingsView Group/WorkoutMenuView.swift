@@ -32,6 +32,6 @@ struct WorkoutMenuView: View {
 
 struct WorkoutMenuView_Previews: PreviewProvider {
     static var previews: some View {
-        WorkoutMenuView()
+        WorkoutMenuView().environmentObject(TrainingProgramManager())
     }
 }

@@ -9,16 +9,16 @@ import SwiftUI
 
 struct StatusView: View {
     
-    @EnvironmentObject var watch: WatchManager
+    //@EnvironmentObject var watch: WatchManager
     @EnvironmentObject var trainer: TrainingProgramManager
     
     var body: some View {
         Form {
             
             Section(header: Text("Status")){
-                Toggle("Enable Apple Watch", isOn: $watch.enable)
+                Toggle("Enable Apple Watch", isOn: $trainer.watch.enable)
                 
-                if watch.enable{
+                if trainer.watch.enable{
                     WatchStatusView()
                 }
             
@@ -26,7 +26,7 @@ struct StatusView: View {
                 
                 Button(action: {
                     trainer.mqtt.connect()
-                    watch.checkReachable()
+                    trainer.watch.checkReachable()
                 }, label: {
                     Text("Refresh Connection Status")
                 })
@@ -49,6 +49,6 @@ struct StatusView: View {
 
 struct StatusView_Previews: PreviewProvider {
     static var previews: some View {
-        StatusView().environmentObject(WatchManager())
+        StatusView().environmentObject(TrainingProgramManager())
     }
 }

@@ -9,7 +9,8 @@ import SwiftUI
 
 struct RunMetricsView: View {
     
-    @EnvironmentObject var watch: WatchManager
+    //@EnvironmentObject var watch: WatchManager
+    @EnvironmentObject var trainer: TrainingProgramManager
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -17,7 +18,7 @@ struct RunMetricsView: View {
             CaloriesView()
             DistanceView()
             PaceView()
-            Text("Status: \(watch.workoutStatus)")
+            Text("Status: \(trainer.watch.workoutStatus)")
         }
         .frame(width: 230.0, alignment: .leading)
     }
@@ -25,6 +26,6 @@ struct RunMetricsView: View {
 
 struct RunMetricsView_Previews: PreviewProvider {
     static var previews: some View {
-        RunMetricsView().environmentObject(WatchManager())
+        RunMetricsView().environmentObject(TrainingProgramManager())
     }
 }

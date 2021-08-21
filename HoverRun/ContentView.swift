@@ -10,8 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @Environment(\.managedObjectContext) private var viewContext
-    @EnvironmentObject var healthManager: HealthManager
-    @EnvironmentObject var watch: WatchManager
+    //@EnvironmentObject var watch: WatchManager
     @EnvironmentObject var trainer: TrainingProgramManager
     
     
@@ -40,6 +39,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environmentObject(WatchManager())
+        ContentView().environmentObject(TrainingProgramManager())
     }
 }

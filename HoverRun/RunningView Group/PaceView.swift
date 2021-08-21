@@ -9,12 +9,13 @@ import SwiftUI
 
 struct PaceView: View {
     
-    @EnvironmentObject var watch: WatchManager
+    //@EnvironmentObject var watch: WatchManager
+    @EnvironmentObject var trainer: TrainingProgramManager
     
     var body: some View {
         HStack{
             Image("pace-icon")
-            Text ("\(watch.getMetric(data: watch.currentPace), specifier:"%.1f") min/km")
+            Text ("\(trainer.watch.getMetric(data: trainer.watch.currentPace), specifier:"%.1f") min/km")
                 .font(.title)
         }
     }
@@ -22,6 +23,6 @@ struct PaceView: View {
 
 struct PaceView_Previews: PreviewProvider {
     static var previews: some View {
-        PaceView().environmentObject(WatchManager())
+        PaceView().environmentObject(TrainingProgramManager())
     }
 }

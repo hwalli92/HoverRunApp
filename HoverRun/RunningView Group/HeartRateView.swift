@@ -9,12 +9,13 @@ import SwiftUI
 
 struct HeartRateView: View {
     
-    @EnvironmentObject var watch: WatchManager
+    //@EnvironmentObject var watch: WatchManager
+    @EnvironmentObject var trainer: TrainingProgramManager
     
     var body: some View {
         HStack{
             Image("heartrate-icon")
-            Text ("\(watch.getMetric(data: watch.heartrate), specifier:"%.0f") BPM")
+            Text ("\(trainer.watch.getMetric(data: trainer.watch.heartrate), specifier:"%.0f") BPM")
                 .font(.title)
         }
     }
@@ -22,6 +23,6 @@ struct HeartRateView: View {
 
 struct HeartRateView_Previews: PreviewProvider {
     static var previews: some View {
-        HeartRateView().environmentObject(WatchManager())
+        HeartRateView().environmentObject(TrainingProgramManager())
     }
 }

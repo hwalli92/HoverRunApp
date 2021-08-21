@@ -9,12 +9,13 @@ import SwiftUI
 
 struct DistanceView: View {
     
-    @EnvironmentObject var watch: WatchManager
+    //@EnvironmentObject var watch: WatchManager
+    @EnvironmentObject var trainer: TrainingProgramManager
     
     var body: some View {
         HStack{
             Image("distance-icon")
-            Text ("\(watch.getMetric(data: watch.distance), specifier:"%.1f") m")
+            Text ("\(trainer.watch.getMetric(data: trainer.watch.distance), specifier:"%.1f") m")
                 .font(.title)
         }
     }
@@ -22,6 +23,6 @@ struct DistanceView: View {
 
 struct DistanceView_Previews: PreviewProvider {
     static var previews: some View {
-        DistanceView().environmentObject(WatchManager())
+        DistanceView().environmentObject(TrainingProgramManager())
     }
 }
