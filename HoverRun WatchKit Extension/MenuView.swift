@@ -22,14 +22,14 @@ struct MenuView: View {
                 print("End tapped!")
                 self.endAction()
                 self.workoutPaused = false
-            }).padding(.trailing, 6)
+            }).padding(.trailing, 5.0)
             
             Spacer()
             
             MenuButton(title: workoutPaused ? "Resume" : "Pause", symbolName: workoutPaused ? "play.circle.fill" : "pause.circle.fill", action: {
                 self.workoutPaused.toggle()
                 self.pauseAction()
-            }).padding(.leading, 6)
+            }).padding(.leading, 5)
             Spacer()
         }
     }
@@ -49,10 +49,10 @@ struct MenuView_Previews: PreviewProvider {
             MenuView(pauseAction: pauseAction, endAction: endAction)
             .previewDevice("Apple Watch Series 5 - 40mm")
             .previewDisplayName("40 mm")
-
-            MenuView(pauseAction: pauseAction, endAction: endAction)
-            .previewDevice("Apple Watch Series 5 - 44mm")
-            .previewDisplayName("44 mm")
+//
+//            MenuView(pauseAction: pauseAction, endAction: endAction)
+//            .previewDevice("Apple Watch Series 5 - 44mm")
+//            .previewDisplayName("44 mm")
         }
         .environmentObject(WorkoutManager())
     }
