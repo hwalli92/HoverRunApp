@@ -11,13 +11,12 @@ import SwiftUI
 struct HoverRunApp: App {
     
     let dataContainer = DataManager.dataManager
-    //let watch = WatchManager()
-    let trainer = TrainingProgramManager()
+    let watch = WatchManager()
         
     var body: some Scene {
         WindowGroup {
             ContentView().environment(\.managedObjectContext, dataContainer.dataContainer.viewContext)
-                .environmentObject(trainer)
+                .environmentObject(watch)
         }
     }
 }

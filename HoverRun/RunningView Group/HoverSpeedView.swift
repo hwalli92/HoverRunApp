@@ -9,19 +9,19 @@ import SwiftUI
 
 struct HoverSpeedView: View {
     
-    @EnvironmentObject var trainer: TrainingProgramManager
+    @EnvironmentObject var watch: WatchManager
     
     var body: some View {
         HStack{
             Button(action: {
-                trainer.updateLevel(factor: 0.5)
+                watch.updateLevel(factor: 0.5)
             }, label: {
                 Image ("speed-up-icon")
             })
             .padding(.trailing, 20.0)
             
             Button(action: {
-                trainer.updateLevel(factor: -0.5)
+                watch.updateLevel(factor: -0.5)
             }, label: {
                 Image ("speed-down-icon")
             })
@@ -32,6 +32,6 @@ struct HoverSpeedView: View {
 
 struct HoverSpeedView_Previews: PreviewProvider {
     static var previews: some View {
-        HoverSpeedView().environmentObject(TrainingProgramManager())
+        HoverSpeedView().environmentObject(WatchManager())
     }
 }

@@ -12,18 +12,23 @@ class WatchManager: NSObject, WCSessionDelegate, ObservableObject {
     
     var session: WCSession
     
+    var mqtt = MQTTManager()
     var dataContainer = DataManager.dataManager
     
     var workoutStart: Date = Date()
     var workoutEnd: Date = Date()
     var timestamp: [Int] = [0]
     
-    @Published var workoutStatus: String = "Not Running"
+    @Published var workoutStatus: String = "Stop"
     @Published var heartrate: [Double] = [0]
     @Published var distance: [Double] = [0]
     @Published var activeCalories: [Double] = [0]
     @Published var currentPace: [Double] = [0]
     @Published var reachable: Bool = false
+    @Published var trainingProgram = "Timed"
+    @Published var trainingLevel = 1.0
+    @Published var trainingLimit = 10.0
+    static let trainingPrograms = ["Manual", "Timed", "Distance"]
     
     init(session: WCSession = .default){
         self.session = session
@@ -38,7 +43,7 @@ class WatchManager: NSObject, WCSessionDelegate, ObservableObject {
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         DispatchQueue.main.async {
-            self.workoutStatus = message["status"] as? String ?? "Not Running"
+            self.workoutStatus = message["status"] as? String ?? "Stop"
             self.timestamp.append(message["timestamp"] as? Int ?? 0)
             self.heartrate.append(message["heartrate"] as? Double ?? 0)
             self.activeCalories.append(message["activeCalories"] as? Double ?? 0)
@@ -78,6 +83,9 @@ class WatchManager: NSObject, WCSessionDelegate, ObservableObject {
         
         newWorkout.start = self.workoutStart
         newWorkout.end = self.workoutEnd
+        newWorkout.type = self.trainingProgram
+        newWorkout.limit = String(self.trainingLimit)
+        newWorkout.intensity = self.trainingLevel
         newWorkout.calories = self.activeCalories
         newWorkout.distance = self.distance
         newWorkout.heartrate = self.heartrate
@@ -96,7 +104,7 @@ class WatchManager: NSObject, WCSessionDelegate, ObservableObject {
     func resetWorkout() {
         DispatchQueue.main.async {
             self.timestamp = [0]
-            self.workoutStatus = "Not Running"
+            self.workoutStatus = "Stop"
             self.heartrate = [0]
             self.distance = [0]
             self.activeCalories = [0]
@@ -116,5 +124,20 @@ class WatchManager: NSObject, WCSessionDelegate, ObservableObject {
             return value
         }
         return 0
+    }
+    
+    func updateLevel(factor: Double) {
+        if self.trainingLevel > 0.0 && self.trainingLevel < 5.0 {
+            self.trainingLevel += factor
+        }
+    }
+    
+    func updateProgram() {
+        let trainingDetails = ["Type": self.trainingProgram, "Level": self.trainingLevel, "Limit": self.trainingLimit, "Status": self.workoutStatus] as [String : Any]
+        
+        if let JSONData = try? JSONSerialization.data(withJSONObject: trainingDetails, options: []){
+            let JSONText = String(data: JSONData, encoding: .utf8) ?? "None"
+            self.mqtt.sendMessage(topic: "hvrrun/training", message: JSONText)
+        }
     }
 }

@@ -9,35 +9,35 @@ import SwiftUI
 
 struct HoverTrainingView: View {
     
-    @EnvironmentObject var trainer: TrainingProgramManager
+    @EnvironmentObject var watch: WatchManager
     
     var body: some View {
         VStack {
             Text("Training Session Details").font(.largeTitle).padding(.bottom, 5.0)
             
-            Text("Status:  \(trainer.trainingStatus)")
+            Text("Status:  \(watch.workoutStatus)")
                 .font(.title2)
                 .padding(.bottom, 5.0)
             
-            Text("Session Type:  \(trainer.trainingProgram)")
+            Text("Session Type:  \(watch.trainingProgram)")
                 .font(.title2)
                 .padding(.bottom, 5.0)
             
-            if trainer.trainingProgram != "Manual" {
+            if watch.trainingProgram != "Manual" {
                 
-                if trainer.trainingProgram == "Timed" {
-                    Text("Time Limit:  \(trainer.trainingLimit, specifier: "%.1f")")
+                if watch.trainingProgram == "Timed" {
+                    Text("Time Limit:  \(watch.trainingLimit, specifier: "%.1f")")
                         .font(.title2)
                         .padding(.bottom, 5.0)
                 }
                 
-                if trainer.trainingProgram == "Distance" {
-                    Text("Distance Limit:  \(trainer.trainingLimit, specifier: "%.1f")")
+                if watch.trainingProgram == "Distance" {
+                    Text("Distance Limit:  \(watch.trainingLimit, specifier: "%.1f")")
                         .font(.title2)
                         .padding(.bottom, 5.0)
                 }
                 
-                Text("Intensity Level:  \(trainer.trainingLevel, specifier: "%.1f")")
+                Text("Intensity Level:  \(watch.trainingLevel, specifier: "%.1f")")
                     .font(.title2)
             }
         }
@@ -46,6 +46,6 @@ struct HoverTrainingView: View {
 
 struct HoverTrainingView_Previews: PreviewProvider {
     static var previews: some View {
-        HoverTrainingView().environmentObject(TrainingProgramManager())
+        HoverTrainingView().environmentObject(WatchManager())
     }
 }

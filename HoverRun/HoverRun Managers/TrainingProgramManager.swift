@@ -10,11 +10,10 @@ import Foundation
 class TrainingProgramManager: ObservableObject {
     
     var mqtt = MQTTManager()
-    var watch = WatchManager()
     
     @Published var trainingProgram = "Timed"
     @Published var trainingLevel = 1.0
-    @Published var trainingLimit = 5.0
+    @Published var trainingLimit = 10.0
     @Published var trainingStatus = "Stop"
     static let trainingPrograms = ["Manual", "Timed", "Distance"]
     
@@ -25,11 +24,10 @@ class TrainingProgramManager: ObservableObject {
             let JSONText = String(data: JSONData, encoding: .utf8) ?? "None"
             self.mqtt.sendMessage(topic: "hvrrun/training", message: JSONText)
         }
-        
     }
     
     func updateLevel(factor: Double) {
-        if self.trainingLevel > 0.0 && self.trainingLevel < 8.0 {
+        if self.trainingLevel > 0.0 && self.trainingLevel < 5.0 {
             self.trainingLevel += factor
         }
     }

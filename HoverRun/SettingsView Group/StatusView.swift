@@ -9,8 +9,7 @@ import SwiftUI
 
 struct StatusView: View {
     
-    //@EnvironmentObject var watch: WatchManager
-    @EnvironmentObject var trainer: TrainingProgramManager
+    @EnvironmentObject var watch: WatchManager
     
     var body: some View {
         Form {
@@ -21,8 +20,8 @@ struct StatusView: View {
                 BoardStatusView()
                 
                 Button(action: {
-                    trainer.mqtt.connect()
-                    trainer.watch.checkReachable()
+                    watch.mqtt.connect()
+                    watch.checkReachable()
                 }, label: {
                     Text("Refresh Connection Status")
                 })
@@ -32,7 +31,7 @@ struct StatusView: View {
                 WorkoutMenuView()
                 
                 Button(action: {
-                    trainer.updateProgram()
+                    watch.updateProgram()
                 }, label: {
                     Text("Update Training Settings")
                 })

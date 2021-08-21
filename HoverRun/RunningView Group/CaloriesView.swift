@@ -9,13 +9,12 @@ import SwiftUI
 
 struct CaloriesView: View {
     
-    //@EnvironmentObject var watch: WatchManager
-    @EnvironmentObject var trainer: TrainingProgramManager
+    @EnvironmentObject var watch: WatchManager
     
     var body: some View {
         HStack{
             Image("calories-icon").resizable().frame(width: 50, height: 50)
-            Text ("\(trainer.watch.getMetric(data: trainer.watch.activeCalories), specifier:"%.0f") Cal")
+            Text ("\(watch.getMetric(data: watch.activeCalories), specifier:"%.0f") Cal")
                 .font(.title)
         }
     }
@@ -23,6 +22,6 @@ struct CaloriesView: View {
 
 struct CaloriesView_Previews: PreviewProvider {
     static var previews: some View {
-        CaloriesView().environmentObject(TrainingProgramManager())
+        CaloriesView().environmentObject(WatchManager())
     }
 }

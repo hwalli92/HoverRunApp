@@ -9,15 +9,14 @@ import SwiftUI
 
 struct WatchStatusView: View {
     
-    //@EnvironmentObject var watch: WatchManager
-    @EnvironmentObject var trainer: TrainingProgramManager
+    @EnvironmentObject var watch: WatchManager
     
     var body: some View {
         HStack{
             Text("Apple Watch: ")
                 .padding(.trailing, 105.0)
             HStack {
-                if trainer.watch.reachable {
+                if watch.reachable {
                     Image ("connected-icon")
                 } else {
                     Image ("disconnected-icon")

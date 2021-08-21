@@ -9,8 +9,8 @@ import SwiftUI
 
 struct RunMetricsView: View {
     
-    //@EnvironmentObject var watch: WatchManager
-    @EnvironmentObject var trainer: TrainingProgramManager
+    @EnvironmentObject var watch: WatchManager
+    //@EnvironmentObject var trainer: TrainingProgramManager
     
     var body: some View {
         HStack(alignment: .center) {
@@ -30,6 +30,6 @@ struct RunMetricsView: View {
 
 struct RunMetricsView_Previews: PreviewProvider {
     static var previews: some View {
-        RunMetricsView().environmentObject(TrainingProgramManager())
+        RunMetricsView().environmentObject(WatchManager())
     }
 }
