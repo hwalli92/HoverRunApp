@@ -110,7 +110,7 @@ class WorkoutManager: NSObject, ObservableObject {
         cancellable?.cancel()
         accumulatedTime = elapsedSeconds
         running = false
-        self.sendData(status: "Running")
+        self.sendData(status: "Pause")
         
     }
 
