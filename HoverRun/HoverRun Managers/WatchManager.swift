@@ -55,12 +55,19 @@ class WatchManager: NSObject, WCSessionDelegate, ObservableObject {
         }
     }
     
+    func sendMessage(workoutStatus: String){
+        self.session.sendMessage(["status": workoutStatus], replyHandler: nil){ (error) in
+            print("Error sending message: \(error)")
+        }
+        
+    }
+    
     func sessionDidBecomeInactive(_ session: WCSession) {
-
+        self.checkReachable()
     }
         
     func sessionDidDeactivate(_ session: WCSession) {
-
+        self.session.activate()
     }
     
     func checkReachable() {
