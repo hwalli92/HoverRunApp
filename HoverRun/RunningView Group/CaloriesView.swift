@@ -14,8 +14,8 @@ struct CaloriesView: View {
     
     var body: some View {
         HStack{
-            Image("calories-icon")
-            Text ("\(trainer.watch.getMetric(data: trainer.watch.activeCalories), specifier:"%.1f") Cal")
+            Image("calories-icon").resizable().frame(width: 50, height: 50)
+            Text ("\(trainer.watch.getMetric(data: trainer.watch.activeCalories), specifier:"%.0f") Cal")
                 .font(.title)
         }
     }

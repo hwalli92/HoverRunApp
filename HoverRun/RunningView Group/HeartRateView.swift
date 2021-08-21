@@ -14,7 +14,7 @@ struct HeartRateView: View {
     
     var body: some View {
         HStack{
-            Image("heartrate-icon")
+            Image("heartrate-icon").resizable().frame(width: 50, height: 50)
             Text ("\(trainer.watch.getMetric(data: trainer.watch.heartrate), specifier:"%.0f") BPM")
                 .font(.title)
         }

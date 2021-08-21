@@ -13,14 +13,18 @@ struct RunMetricsView: View {
     @EnvironmentObject var trainer: TrainingProgramManager
     
     var body: some View {
-        VStack(alignment: .leading) {
-            HeartRateView()
-            CaloriesView()
-            DistanceView()
-            PaceView()
-            Text("Status: \(trainer.watch.workoutStatus)")
+        HStack(alignment: .center) {
+            VStack(alignment: .leading){
+                HeartRateView()
+                DistanceView()
+            }.padding(.trailing, 5.0).frame(alignment: .topLeading)
+            
+            VStack(alignment: .leading){
+                CaloriesView()
+                PaceView()
+            }.padding(.trailing, 5.0).frame(alignment: .topTrailing)
         }
-        .frame(width: 230.0, alignment: .leading)
+        
     }
 }
 

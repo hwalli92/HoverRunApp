@@ -14,14 +14,10 @@ struct RunningView: View {
     
     var body: some View {
         VStack(spacing: 50.0){
-            HStack{
-                RunMetricsView()
-                HoverSpeedView()
-            }
-            
-            HoverStartStopView()
-            
+            RunMetricsView()
+            //HoverStartStopView()
             HoverTrainingView()
+            HoverSpeedView()
         }
     }
 }

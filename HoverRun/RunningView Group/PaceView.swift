@@ -14,8 +14,8 @@ struct PaceView: View {
     
     var body: some View {
         HStack{
-            Image("pace-icon")
-            Text ("\(trainer.watch.getMetric(data: trainer.watch.currentPace), specifier:"%.1f") min/km")
+            Image("pace-icon").resizable().frame(width: 50, height: 50)
+            Text ("\(trainer.watch.getMetric(data: trainer.watch.currentPace), specifier:"%.2f") min/km")
                 .font(.title)
         }
     }

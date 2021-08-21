@@ -13,21 +13,32 @@ struct HoverTrainingView: View {
     
     var body: some View {
         VStack {
-            Text("Training Status:  \(trainer.trainingStatus)")
+            Text("Training Session Details").font(.largeTitle).padding(.bottom, 5.0)
             
-            Text("Training Type:  \(trainer.trainingProgram)")
+            Text("Status:  \(trainer.getTrainingStatus())")
+                .font(.title2)
+                .padding(.bottom, 5.0)
+            
+            Text("Session Type:  \(trainer.trainingProgram)")
+                .font(.title2)
+                .padding(.bottom, 5.0)
             
             if trainer.trainingProgram != "Manual" {
                 
                 if trainer.trainingProgram == "Timed" {
-                    Text("Training Time Limit:  \(trainer.trainingLimit, specifier: "%.1f")")
+                    Text("Time Limit:  \(trainer.trainingLimit, specifier: "%.1f")")
+                        .font(.title2)
+                        .padding(.bottom, 5.0)
                 }
                 
                 if trainer.trainingProgram == "Distance" {
-                    Text("Training Distance Limit:  \(trainer.trainingLimit, specifier: "%.1f")")
+                    Text("Distance Limit:  \(trainer.trainingLimit, specifier: "%.1f")")
+                        .font(.title2)
+                        .padding(.bottom, 5.0)
                 }
                 
-                Text("Training Level:  \(trainer.trainingLevel, specifier: "%.1f")")
+                Text("Intensity Level:  \(trainer.trainingLevel, specifier: "%.1f")")
+                    .font(.title2)
             }
         }
     }

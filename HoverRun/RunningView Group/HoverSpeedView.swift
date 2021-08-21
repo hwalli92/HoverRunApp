@@ -12,21 +12,20 @@ struct HoverSpeedView: View {
     @EnvironmentObject var trainer: TrainingProgramManager
     
     var body: some View {
-        VStack{
+        HStack{
             Button(action: {
                 trainer.updateLevel(factor: 0.5)
             }, label: {
                 Image ("speed-up-icon")
             })
-            
-            Text ("\(trainer.trainingLevel, specifier: "%.1f")")
-                .font(.title)
+            .padding(.trailing, 20.0)
             
             Button(action: {
                 trainer.updateLevel(factor: -0.5)
             }, label: {
                 Image ("speed-down-icon")
             })
+            .padding(.leading, 20.0)
         }
     }
 }
