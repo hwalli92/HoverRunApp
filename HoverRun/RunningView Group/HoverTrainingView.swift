@@ -15,7 +15,7 @@ struct HoverTrainingView: View {
         VStack {
             Text("Training Session Details").font(.largeTitle).padding(.bottom, 5.0)
             
-            Text("Status:  \(trainer.getTrainingStatus())")
+            Text("Status:  \(trainer.trainingStatus)")
                 .font(.title2)
                 .padding(.bottom, 5.0)
             

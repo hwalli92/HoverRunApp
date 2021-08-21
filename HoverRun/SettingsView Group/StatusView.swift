@@ -17,7 +17,7 @@ struct StatusView: View {
             
             Section(header: Text("Status")){
                 
-                WatchStatusView()            
+                WatchStatusView()
                 BoardStatusView()
                 
                 Button(action: {
@@ -28,7 +28,7 @@ struct StatusView: View {
                 })
             }
             
-            Section(header: Text("Run Settings")){
+            Section(header: Text("Training Settings")){
                 WorkoutMenuView()
                 
                 Button(action: {
