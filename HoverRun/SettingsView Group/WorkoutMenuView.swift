@@ -20,7 +20,7 @@ struct WorkoutMenuView: View {
         
         Stepper("Training Level: \(trainer.trainingLevel, specifier: "%.1f")", value: $trainer.trainingLevel, in: 0...8, step: 0.5)
             
-        if trainer.trainingProgram == "Time"{
+        if trainer.trainingProgram == "Timed"{
             Stepper("Time Limit: \(trainer.trainingLimit, specifier: "%.1f") minutes", value: $trainer.trainingLimit, in: 0...20, step: 0.5)
         }
             

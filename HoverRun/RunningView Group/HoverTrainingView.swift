@@ -18,7 +18,6 @@ struct HoverTrainingView: View {
             Text("Training Type:  \(trainer.trainingProgram)")
             
             if trainer.trainingProgram != "Manual" {
-                Text("Training Level:  \(trainer.trainingLevel, specifier: "%.1f")")
                 
                 if trainer.trainingProgram == "Timed" {
                     Text("Training Time Limit:  \(trainer.trainingLimit, specifier: "%.1f")")
@@ -27,6 +26,8 @@ struct HoverTrainingView: View {
                 if trainer.trainingProgram == "Distance" {
                     Text("Training Distance Limit:  \(trainer.trainingLimit, specifier: "%.1f")")
                 }
+                
+                Text("Training Level:  \(trainer.trainingLevel, specifier: "%.1f")")
             }
         }
     }

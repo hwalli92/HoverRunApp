@@ -15,7 +15,7 @@ class TrainingProgramManager: ObservableObject {
     @Published var trainingLevel = 1.0
     @Published var trainingLimit = 5.0
     @Published var trainingStatus = "stop"
-    static let trainingPrograms = ["Manual", "Time", "Distance"]
+    static let trainingPrograms = ["Manual", "Timed", "Distance"]
     
     func updateProgram() {
         let trainingDetails = ["Type": self.trainingProgram, "Level": self.trainingLevel, "Limit": self.trainingLimit, "Status": self.trainingStatus] as [String : Any]
