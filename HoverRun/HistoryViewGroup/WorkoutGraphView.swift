@@ -14,7 +14,7 @@ struct WorkoutGraphView: View {
     var yValues: [Double]
     
     var body: some View {
-        LineView(data: yValues.popFirst, title: dataType)
+        LineView(data: yValues.filter{$0 > 0}, title: dataType)
     }
 }
 

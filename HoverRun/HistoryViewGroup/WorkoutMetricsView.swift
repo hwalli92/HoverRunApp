@@ -28,7 +28,7 @@ struct WorkoutMetricsView: View {
                 
                 VStack(alignment: .leading){
                     Text("Avg Pace")
-                    Text("\((getAverage(data: currentWorkout.pace ?? [0])), specifier: "%.1f") min/km")
+                    Text("\(getAvgPace(data: (getMetric(data: currentWorkout.distance ?? [0]))/1000, totalTime: Double(currentWorkout.totaltime)))/km")
                 }
             }
             
@@ -84,7 +84,22 @@ struct WorkoutMetricsView: View {
     }
     
     func getAverage (data: [Double]) -> Double {
-        return data.reduce(0.0, +)/Double(data.count)
+        let fdata = data.filter {$0 > 0}
+        
+        return fdata.reduce(0.0, +)/Double(fdata.count)
+    }
+    
+    func getAvgPace (data: Double, totalTime: Double) -> String {
+        if data > 0 {
+            let avg: Int = Int(totalTime / data)
+            let avgmin: Int = Int((avg % 3600) / 60)
+            let avgsec: Int = Int((avg % 3600) % 60)
+            
+            return String(format: "%d'%d''", avgmin, avgsec)
+        }
+        else{
+            return String(format: "0'0''")
+        }
     }
 }
 
