@@ -20,7 +20,7 @@ class MQTTManager: CocoaMQTTDelegate, ObservableObject {
     init() {
         let clientID = "HoverRunApp"
 //        let host = "10.3.141.1"
-        let host = "192.168.0.41"
+        let host = "192.168.178.77"
         let port = UInt16(1883)
         self.mqttClient = CocoaMQTT(clientID: clientID, host: host, port: port)
         self.mqttClient.username = ""
