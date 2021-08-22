@@ -140,4 +140,13 @@ class WatchManager: NSObject, WCSessionDelegate, ObservableObject {
             self.mqtt.sendMessage(topic: "hvrrun/training", message: JSONText)
         }
     }
+    
+    func updatePID(kp: Int, ki: Double, kd: Int) {
+        let pidSettings = ["kp": kp, "ki": ki, "kd": kd] as [String : Any]
+        
+        if let JSONData = try? JSONSerialization.data(withJSONObject: pidSettings, options: []){
+            let JSONText = String(data: JSONData, encoding: .utf8) ?? "None"
+            self.mqtt.sendMessage(topic: "hvrrun/pidsettings", message: JSONText)
+        }
+    }
 }

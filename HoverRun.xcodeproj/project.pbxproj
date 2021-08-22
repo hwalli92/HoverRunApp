@@ -48,6 +48,7 @@
 		6C4F333826631CB400C8ED63 /* HoverTrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4F333726631CB400C8ED63 /* HoverTrainingView.swift */; };
 		6C69AE03259ABE94009605C2 /* WorkoutSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C69AE02259ABE94009605C2 /* WorkoutSummaryView.swift */; };
 		6C79B72B25A21BCA001FBCA0 /* MailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C79B72A25A21BCA001FBCA0 /* MailManager.swift */; };
+		6CB33A1526D2550C00F0C7A5 /* PIDSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB33A1426D2550C00F0C7A5 /* PIDSettingsView.swift */; };
 		6CB646E72604EF7B00465CF6 /* MQTTManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB646E62604EF7B00465CF6 /* MQTTManager.swift */; };
 		6CC2B216266298340024735B /* WorkoutMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2B215266298340024735B /* WorkoutMenuView.swift */; };
 		6CC2B2232662AF4D0024735B /* TrainingProgramManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2B2222662AF4D0024735B /* TrainingProgramManager.swift */; };
@@ -145,6 +146,7 @@
 		6C4F333726631CB400C8ED63 /* HoverTrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoverTrainingView.swift; sourceTree = "<group>"; };
 		6C69AE02259ABE94009605C2 /* WorkoutSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSummaryView.swift; sourceTree = "<group>"; };
 		6C79B72A25A21BCA001FBCA0 /* MailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailManager.swift; sourceTree = "<group>"; };
+		6CB33A1426D2550C00F0C7A5 /* PIDSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIDSettingsView.swift; sourceTree = "<group>"; };
 		6CB646E62604EF7B00465CF6 /* MQTTManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTTManager.swift; sourceTree = "<group>"; };
 		6CC2B215266298340024735B /* WorkoutMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutMenuView.swift; sourceTree = "<group>"; };
 		6CC2B2222662AF4D0024735B /* TrainingProgramManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingProgramManager.swift; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 				6C0C656A25989E5900F0D43E /* WatchStatusView.swift */,
 				6C0C656F25989E7300F0D43E /* BoardStatusView.swift */,
 				6CC2B215266298340024735B /* WorkoutMenuView.swift */,
+				6CB33A1426D2550C00F0C7A5 /* PIDSettingsView.swift */,
 			);
 			path = "SettingsView Group";
 			sourceTree = "<group>";
@@ -539,6 +542,7 @@
 				6C0C657F2598A6F900F0D43E /* CaloriesView.swift in Sources */,
 				6C0C650925988C7000F0D43E /* ContentView.swift in Sources */,
 				6CFB13A6259B4C27005F04CD /* WorkoutGraphView.swift in Sources */,
+				6CB33A1526D2550C00F0C7A5 /* PIDSettingsView.swift in Sources */,
 				6C0C65932598AC8300F0D43E /* RunMetricsView.swift in Sources */,
 				6C0C65842598A70500F0D43E /* PaceView.swift in Sources */,
 				6C0C65892598A8F500F0D43E /* HoverSpeedView.swift in Sources */,
