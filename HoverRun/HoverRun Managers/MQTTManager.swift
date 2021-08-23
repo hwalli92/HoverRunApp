@@ -32,6 +32,7 @@ class MQTTManager: CocoaMQTTDelegate, ObservableObject {
     
     func connect() {
         if !self.status {
+            self.mqttClient.disconnect()
             self.mqttClient.connect()
             print("Connecting....")
         }
@@ -57,7 +58,8 @@ class MQTTManager: CocoaMQTTDelegate, ObservableObject {
     }
     
     func mqtt(_ mqtt: CocoaMQTT, didReceiveMessage message: CocoaMQTTMessage, id: UInt16) {
-        self.msgAck = message.string ?? "0"
+        self.msgAck = message.string ?? "empty"
+        print("Mqtt Ack was: \(self.msgAck)")
     }
     
     func mqtt(_ mqtt: CocoaMQTT, didSubscribeTopic topic: [String]) {
@@ -78,6 +80,6 @@ class MQTTManager: CocoaMQTTDelegate, ObservableObject {
     }
     
     func mqttDidDisconnect(_ mqtt: CocoaMQTT, withError err: Error?) {
-        self.connect()
+        print("Disconnected")
     }
 }
