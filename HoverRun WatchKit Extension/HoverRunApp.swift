@@ -11,13 +11,17 @@ import SwiftUI
 @main
 struct HoverRunApp: App {
     
-    let workoutManager = WorkoutManager()
+    @StateObject private var workoutManager = WorkoutManager()
     
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                ContentView().environmentObject(workoutManager)
+                ContentView()
             }
+            .sheet(isPresented: $workoutManager.workoutSummary) {
+                WorkoutSummaryView()
+            }
+            .environmentObject(workoutManager)
         }
     }
 }

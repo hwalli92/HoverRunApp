@@ -17,6 +17,7 @@ class WatchManager: NSObject, WCSessionDelegate, ObservableObject {
     
     var workoutStart: Date = Date()
     var workoutEnd: Date = Date()
+    var avgHR: Double = 0.0
     var timestamp: [Int] = [0]
     
     @Published var workoutStatus: String = "Stop"
@@ -49,6 +50,7 @@ class WatchManager: NSObject, WCSessionDelegate, ObservableObject {
             self.activeCalories.append(message["activeCalories"] as? Double ?? 0)
             self.distance.append(message["distance"] as? Double ?? 0)
             self.currentPace.append(message["pace"] as? Double ?? 0)
+            self.avgHR = message["avgHR"] as? Double ?? 0
             self.workoutStart = message["start"] as? Date ?? Date()
             self.workoutEnd = message["end"] as? Date ?? Date()
         }
@@ -89,6 +91,7 @@ class WatchManager: NSObject, WCSessionDelegate, ObservableObject {
         newWorkout.calories = self.activeCalories
         newWorkout.distance = self.distance
         newWorkout.heartrate = self.heartrate
+        newWorkout.avgHR = self.avgHR
         newWorkout.pace = self.currentPace
         newWorkout.timestamp = self.timestamp
         newWorkout.totaltime = Int64(self.getTotalTime(data: self.timestamp))

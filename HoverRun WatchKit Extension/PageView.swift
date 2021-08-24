@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WatchKit
 
 struct PageView: View {
     @EnvironmentObject var workoutSession: WorkoutManager
@@ -17,6 +18,7 @@ struct PageView: View {
     enum PageSelection {
         case menu
         case workout
+        case playing
     }
     
     var body: some View {
@@ -28,6 +30,10 @@ struct PageView: View {
             
             WorkoutView()
                 .tag(PageSelection.workout)
+            
+            NowPlayingView()
+                .tag(PageSelection.playing)
+            
         }.tabViewStyle(PageTabViewStyle())
     }
     

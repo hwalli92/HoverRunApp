@@ -46,7 +46,7 @@
 		6C0C659B2598C50A00F0D43E /* WorkoutDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C659A2598C50A00F0D43E /* WorkoutDetailsView.swift */; };
 		6C0C65A12598C68100F0D43E /* HoverRun.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C659F2598C68100F0D43E /* HoverRun.xcdatamodeld */; };
 		6C4F333826631CB400C8ED63 /* HoverTrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4F333726631CB400C8ED63 /* HoverTrainingView.swift */; };
-		6C6017A226D522BC00AA5828 /* WorkoutSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6017A126D522BC00AA5828 /* WorkoutSummaryView.swift */; };
+		6C6017A626D5298900AA5828 /* WorkoutSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6017A526D5298900AA5828 /* WorkoutSummaryView.swift */; };
 		6C69AE03259ABE94009605C2 /* WorkoutSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C69AE02259ABE94009605C2 /* WorkoutSummaryView.swift */; };
 		6C79B72B25A21BCA001FBCA0 /* MailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C79B72A25A21BCA001FBCA0 /* MailManager.swift */; };
 		6CB33A1526D2550C00F0C7A5 /* PIDSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB33A1426D2550C00F0C7A5 /* PIDSettingsView.swift */; };
@@ -145,7 +145,7 @@
 		6C0C659A2598C50A00F0D43E /* WorkoutDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetailsView.swift; sourceTree = "<group>"; };
 		6C0C65A02598C68100F0D43E /* HoverRun.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HoverRun.xcdatamodel; sourceTree = "<group>"; };
 		6C4F333726631CB400C8ED63 /* HoverTrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoverTrainingView.swift; sourceTree = "<group>"; };
-		6C6017A126D522BC00AA5828 /* WorkoutSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSummaryView.swift; sourceTree = "<group>"; };
+		6C6017A526D5298900AA5828 /* WorkoutSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSummaryView.swift; sourceTree = "<group>"; };
 		6C69AE02259ABE94009605C2 /* WorkoutSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSummaryView.swift; sourceTree = "<group>"; };
 		6C79B72A25A21BCA001FBCA0 /* MailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailManager.swift; sourceTree = "<group>"; };
 		6CB33A1426D2550C00F0C7A5 /* PIDSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIDSettingsView.swift; sourceTree = "<group>"; };
@@ -271,13 +271,13 @@
 				6C0372E52598F7D5004D4D0E /* StartView.swift */,
 				6C0372F22598F844004D4D0E /* WorkoutView.swift */,
 				6C0372FC2598F8DB004D4D0E /* MenuView.swift */,
+				6C6017A526D5298900AA5828 /* WorkoutSummaryView.swift */,
 				6C0372F72598F8D3004D4D0E /* PageView.swift */,
 				6C0372CE2598EFEE004D4D0E /* Buttons */,
 				6C0372D02598EFFB004D4D0E /* Managers */,
 				6C0C652925988C7D00F0D43E /* Assets.xcassets */,
 				6C0C652E25988C7D00F0D43E /* Info.plist */,
 				6C0C652B25988C7D00F0D43E /* Preview Content */,
-				6C6017A126D522BC00AA5828 /* WorkoutSummaryView.swift */,
 			);
 			path = "HoverRun WatchKit Extension";
 			sourceTree = "<group>";
@@ -587,7 +587,7 @@
 				6C0C652425988C7A00F0D43E /* ContentView.swift in Sources */,
 				6C0C652825988C7A00F0D43E /* ComplicationController.swift in Sources */,
 				6C0372E12598F764004D4D0E /* StartButton.swift in Sources */,
-				6C6017A226D522BC00AA5828 /* WorkoutSummaryView.swift in Sources */,
+				6C6017A626D5298900AA5828 /* WorkoutSummaryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

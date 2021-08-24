@@ -52,7 +52,7 @@ struct WorkoutMetricsView: View {
                 
                 VStack(alignment: .leading){
                     Text("Avg. Heart Rate")
-                    Text("\((getAverage(data: currentWorkout.heartrate ?? [0])), specifier: "%.0f") BPM")
+                    Text("\(currentWorkout.avgHR, specifier: "%.0f") BPM")
                 }
             }
             .padding(.top, 24.0)
