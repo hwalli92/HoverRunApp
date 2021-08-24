@@ -165,7 +165,7 @@ class WorkoutManager: NSObject, ObservableObject {
                 let value = statistics.sumQuantity()?.doubleValue(for: meterUnit)
                 let roundedValue = Double( round( 1 * value! ) / 1 )
                 self.distance = roundedValue
-                self.pace = Double( self.elapsedSeconds * 60 ) / roundedValue
+                self.pace = Double( self.elapsedSeconds / 60 ) / (roundedValue / 1000)
                 self.sendData(status: "Running")
                 return
             default:
