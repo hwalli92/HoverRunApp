@@ -26,11 +26,18 @@ class WorkoutManager: NSObject, ObservableObject {
     var accumulatedTime: Int = 0
     
     @Published var heartrate: Double = 0
+    @Published var avgHR: Double = 0
     @Published var activeCalories: Double = 0
     @Published var distance: Double = 0
     @Published var pace: Double = 0
     @Published var elapsedSeconds: Int = 0
-    @Published var workoutSummary: [String: Any] = [:]
+    @Published var workoutSummary: Bool = false {
+        didSet {
+            if workoutSummary == false {
+                resetWorkout()
+            }
+        }
+    }
     
     func requestAuthorization() {
         let typesToShare: Set = [
@@ -71,7 +78,7 @@ class WorkoutManager: NSObject, ObservableObject {
     }
     
     func sendData(status: String){
-        phone.sendAll(workoutStatus: status, timestamp: self.elapsedSeconds, heartrate: self.heartrate, distance: self.distance, calories: self.activeCalories, pace: self.pace, start: self.start, end: self.end)
+        phone.sendAll(workoutStatus: status, timestamp: self.elapsedSeconds, heartrate: self.heartrate, avgHR: self.avgHR, distance: self.distance, calories: self.activeCalories, pace: self.pace, start: self.start, end: self.end)
     }
     
     func startWorkout() {
@@ -126,6 +133,7 @@ class WorkoutManager: NSObject, ObservableObject {
         workoutSession.end()
         cancellable?.cancel()
         end = Date()
+        self.workoutSummary = true
         self.sendData(status: "Ended")
     }
 
@@ -139,10 +147,6 @@ class WorkoutManager: NSObject, ObservableObject {
         }
     }
     
-    func createSummary() {
-        workoutSummary = [ "Total Time": elapsedSeconds, "Total Distance": distance, "Calories Burned": activeCalories, "Pace": pace ]
-    }
-    
     func updateForStatistics(_ statistics: HKStatistics?) {
         guard let statistics = statistics else { return }
         
@@ -150,22 +154,18 @@ class WorkoutManager: NSObject, ObservableObject {
             switch statistics.quantityType {
             case HKQuantityType.quantityType(forIdentifier: .heartRate):
                 let heartRateUnit = HKUnit.count().unitDivided(by: HKUnit.minute())
-                let value = statistics.mostRecentQuantity()?.doubleValue(for: heartRateUnit)
-                let roundedValue = Double( round( 1 * value! ) / 1 )
-                self.heartrate = roundedValue
+                self.heartrate = statistics.mostRecentQuantity()?.doubleValue(for: heartRateUnit) ?? 0
+                self.avgHR = statistics.averageQuantity()?.doubleValue(for: heartRateUnit) ?? 0
                 self.sendData(status: "Running")
             case HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned):
                 let energyUnit = HKUnit.kilocalorie()
-                let value = statistics.sumQuantity()?.doubleValue(for: energyUnit)
-                self.activeCalories = Double( round( 1 * value! ) / 1 )
+                self.activeCalories = statistics.sumQuantity()?.doubleValue(for: energyUnit) ?? 0
                 self.sendData(status: "Running")
                 return
             case HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning):
                 let meterUnit = HKUnit.meter()
-                let value = statistics.sumQuantity()?.doubleValue(for: meterUnit)
-                let roundedValue = Double( round( 1 * value! ) / 1 )
-                self.distance = roundedValue
-                self.pace = Double( self.elapsedSeconds / 60 ) / (roundedValue / 1000)
+                self.distance = statistics.sumQuantity()?.doubleValue(for: meterUnit) ?? 0
+                self.pace = Double( self.elapsedSeconds / 60 ) / (self.distance / 1000)
                 self.sendData(status: "Running")
                 return
             default:
@@ -186,8 +186,7 @@ extension WorkoutManager: HKWorkoutSessionDelegate {
         if toState == .ended {
             workoutBuilder.endCollection(withEnd: Date()) { (success, error) in
                 self.workoutBuilder.finishWorkout { (workout, error) in
-                    self.createSummary()
-                    self.resetWorkout()
+                    self.workoutSummary = true
                 }
             }
         }
