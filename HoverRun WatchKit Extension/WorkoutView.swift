@@ -22,8 +22,13 @@ struct WorkoutView: View {
             Text("\(workoutSession.heartrate, specifier: "%.0f") BPM")
             .font(Font.system(size: 24, weight: .regular, design: .default).monospacedDigit())
             
-            Text("\(workoutSession.distance, specifier: "%.1f") m")
-            .font(Font.system(size: 24, weight: .regular, design: .default).monospacedDigit())
+            if workoutSession.distance < 1000{
+                Text("\(workoutSession.distance, specifier: "%.1f") m")
+                .font(Font.system(size: 24, weight: .regular, design: .default).monospacedDigit())
+            } else {
+                Text("\((workoutSession.distance/1000), specifier: "%.2f") km")
+                .font(Font.system(size: 24, weight: .regular, design: .default).monospacedDigit())
+            }
             
             Text("\(workoutSession.pace, specifier: "%.1f") min/km")
             .font(Font.system(size: 24, weight: .regular, design: .default).monospacedDigit())

@@ -31,7 +31,7 @@ struct MenuButton: View {
         Button(action: { self.action() }) {
             Text(self.title)
         }
-        .buttonStyle(MenuStyle(symbolName: symbolName))
+        .buttonStyle(MenuStyle(symbolName: symbolName)).foregroundColor(.green)
     }
 }
 

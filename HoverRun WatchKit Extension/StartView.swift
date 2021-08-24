@@ -16,7 +16,7 @@ struct StartView: View {
     
     var body: some View {
         StartButton(action: {
-            self.startAction!() // FixMe!
+            self.startAction!()
         }).onAppear() {
             self.workoutSession.requestAuthorization()
         }

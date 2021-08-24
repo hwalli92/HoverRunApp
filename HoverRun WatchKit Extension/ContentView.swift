@@ -3,6 +3,7 @@
 //  HoverRun WatchKit Extension
 //
 //  Created by Hasnainali Walli on 2020-12-27.
+//  Template by Apple found here: https://developer.apple.com/documentation/healthkit/workouts_and_activity_rings/build_a_workout_app_for_apple_watch
 //
 
 import SwiftUI
@@ -34,6 +35,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(WorkoutManager())
     }
 }

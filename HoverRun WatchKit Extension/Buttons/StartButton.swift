@@ -11,10 +11,10 @@ import UIKit
 struct StartButtonStyle: ButtonStyle {
     func makeBody(configuration: ButtonStyleConfiguration) -> some View {
         Circle()
-            .fill(Color(UIColor.darkGray))
+            .fill(Color(UIColor.green))
             .overlay(
                 configuration.label
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                     .font(Font.system(size: 36, weight: .black, design: .default))
             )
             .frame(width: 130, height: 130)
