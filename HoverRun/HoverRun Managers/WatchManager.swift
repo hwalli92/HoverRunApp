@@ -135,6 +135,14 @@ class WatchManager: NSObject, WCSessionDelegate, ObservableObject {
         }
     }
     
+    func speedUp() {
+        self.mqtt.sendMessage(topic: "hvrrun/speedup", message: "speed up")
+    }
+    
+    func speedDown() {
+        self.mqtt.sendMessage(topic: "hvrrun/speeddown", message: "speed down")
+    }
+    
     func updateProgram() {
         let trainingDetails = ["Type": self.trainingProgram, "Level": self.trainingLevel, "Limit": self.trainingLimit, "Status": self.workoutStatus] as [String : Any]
         

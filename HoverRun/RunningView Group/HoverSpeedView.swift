@@ -14,14 +14,14 @@ struct HoverSpeedView: View {
     var body: some View {
         HStack{
             Button(action: {
-                watch.updateLevel(factor: 0.5)
+                watch.speedUp()
             }, label: {
                 Image ("speed-up-icon")
             })
             .padding(.trailing, 20.0)
             
             Button(action: {
-                watch.updateLevel(factor: -0.5)
+                watch.speedDown()
             }, label: {
                 Image ("speed-down-icon")
             })
