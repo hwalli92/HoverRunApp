@@ -144,8 +144,8 @@ class WatchManager: NSObject, WCSessionDelegate, ObservableObject {
         }
     }
     
-    func updatePID(kp: Int, ki: Double, kd: Int) {
-        let pidSettings = ["kp": kp, "ki": ki, "kd": kd] as [String : Any]
+    func updatePID(kp: Double, ki: Double, kd: Double) {
+        let pidSettings = ["kp": kp, "ki": ki, "kd": kd] as [String : Double]
         
         if let JSONData = try? JSONSerialization.data(withJSONObject: pidSettings, options: []){
             let JSONText = String(data: JSONData, encoding: .utf8) ?? "None"

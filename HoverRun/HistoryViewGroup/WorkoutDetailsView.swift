@@ -35,6 +35,8 @@ struct WorkoutDetailsView: View {
                     WorkoutGraphView(dataType: data.dataType, yValues: data.data)
                         .padding(.bottom, 300.0)
                 }
+                
+                Spacer()
             }.padding(.top, -280.0)
         }.navigationBarTitle(Text("\(dateString(date: currentWorkout.start ?? Date()))"))
         .navigationBarItems(trailing: Button(action: {self.isShowingMailView.toggle()}, label: {

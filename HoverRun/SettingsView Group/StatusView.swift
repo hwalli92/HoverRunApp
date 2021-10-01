@@ -11,9 +11,9 @@ struct StatusView: View {
     
     @EnvironmentObject var watch: WatchManager
     
-    @State var kp: Int = 10
+    @State var kp: Double = 0.5
     @State var ki: Double = 0.0
-    @State var kd: Int = 0
+    @State var kd: Double = 0.0
     
     var body: some View {
         Form {
@@ -42,7 +42,9 @@ struct StatusView: View {
             }
             
             Section(header: Text("PID Settings")){
-                PIDSettingsView(kp: self.$kp, ki: self.$ki, kd: self.$kd)
+                Stepper("Kp Level: \(kp, specifier: "%.1f")", value: $kp, in: 0...10, step: 0.5)
+                Stepper("Ki Level: \(ki, specifier: "%.3f")", value: $ki, in: 0...10, step: 0.005)
+                Stepper("Kd Level: \(kd, specifier: "%.1f")", value: $kd, in: 0...10, step: 0.5)
                 
                 Button(action: {
                     watch.updatePID(kp: self.kp, ki: self.ki, kd: self.kd)

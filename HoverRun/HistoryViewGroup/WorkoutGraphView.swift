@@ -14,7 +14,10 @@ struct WorkoutGraphView: View {
     var yValues: [Double]
     
     var body: some View {
-        LineView(data: yValues.filter{$0 > 0}, title: dataType)
+        LineView(data: yValues
+                    .filter{$0 > 0}
+                    .filter{!$0.isNaN}
+                    .filter{!$0.isInfinite}, title: dataType)
     }
 }
 

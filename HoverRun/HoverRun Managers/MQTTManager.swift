@@ -80,6 +80,7 @@ class MQTTManager: CocoaMQTTDelegate, ObservableObject {
     }
     
     func mqttDidDisconnect(_ mqtt: CocoaMQTT, withError err: Error?) {
+        self.status = false
         print("Disconnected")
     }
 }

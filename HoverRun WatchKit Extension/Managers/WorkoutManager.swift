@@ -133,8 +133,8 @@ class WorkoutManager: NSObject, ObservableObject {
         workoutSession.end()
         cancellable?.cancel()
         end = Date()
-        self.workoutSummary = true
         self.sendData(status: "Ended")
+        self.workoutSummary = true
     }
 
     func resetWorkout() {
@@ -159,14 +159,14 @@ class WorkoutManager: NSObject, ObservableObject {
                 self.sendData(status: "Running")
             case HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned):
                 let energyUnit = HKUnit.kilocalorie()
-                let value = statistics.sumQuantity()?.doubleValue(for: energyUnit)
-                self.activeCalories = Double( round( 1 * value! ) / 1 )
+                self.activeCalories = statistics.sumQuantity()?.doubleValue(for: energyUnit) ?? 0
+                //self.activeCalories = Double( round( 1 * value! ) / 1 )
                 self.sendData(status: "Running")
                 return
             case HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning):
                 let meterUnit = HKUnit.meter()
-                let value = statistics.sumQuantity()?.doubleValue(for: meterUnit)
-                self.distance = Double( round( 1 * value! ) / 1 )
+                self.distance = statistics.sumQuantity()?.doubleValue(for: meterUnit) ?? 0
+                //self.distance = Double( round( 1 * value! ) / 1 )
                 self.pace = (Double(self.elapsedSeconds) / 60 ) / (self.distance / 1000)
                 self.sendData(status: "Running")
                 return
